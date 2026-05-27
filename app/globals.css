@@ -1,26 +1,29 @@
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/lora";
+@import "@fontsource-variable/dancing-script";
 @import "tailwindcss";
 
+@theme {
+  --color-plum: #8800CC;
+  --color-plum-dark: #6600AA;
+  --color-sage: #8800CC;
+  --color-sage-light: #f5f0ff;
+  --color-cream: #150220;
+  --color-text-dark: #1a1a1a;
+  --color-text-muted: #555555;
+  --color-border-brand: #e0e0e0;
+
+  --font-serif: "Lora Variable", Georgia, serif;
+  --font-sans: "Inter Variable", system-ui, sans-serif;
+  --font-script: "Dancing Script Variable", "Dancing Script", cursive;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #150220;
+  --foreground: #ffffff;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
