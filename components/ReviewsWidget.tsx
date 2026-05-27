@@ -1,21 +1,18 @@
 const reviews = [
   {
-    name: "Sarah M.",
+    name: "Sandra Dare",
     rating: 5,
-    date: "March 2025",
-    text: "I came to Gloria with chronic lower back pain that had been limiting me for years. After just three sessions I noticed a real difference — less stiffness in the morning, more range of movement. She genuinely listens and adapts every session. Highly recommend.",
+    text: "I have been going to Gloria for years now, always walk out feeling better than I walked in. She especially loves working on necks and shoulders (which I need). And she accepts health funds — big bonus!!",
   },
   {
-    name: "James T.",
+    name: "Caroline Sonter",
     rating: 5,
-    date: "February 2025",
-    text: "Had my first Bowen therapy session and I genuinely did not know what to expect. The gentleness of it surprised me — and then how effective it was surprised me even more. Drove home feeling like I'd had a full reset. Already booked my next appointment.",
+    text: "I have been seeing Gloria for many years now, and I see her frequently to ease my pain! Gloria is an awesome massage therapist, she knows how to create a calming environment, she is able to release the tension and knows the exact spots to massage. I highly recommend Gloria to all my family and friends, and many of them see Gloria on a frequent basis also. Do yourself a favour and book in with Gloria!",
   },
   {
-    name: "Karen B.",
+    name: "Laura Sheather",
     rating: 5,
-    date: "January 2025",
-    text: "Gloria has been treating my shoulder for the past two months and the improvement has been remarkable. Professional, warm, and she explains everything she's doing. Being able to claim my Medibank rebate on the spot is a bonus. 10/10.",
+    text: "Gloria has been helping with muscle and joint pain for many years now and I cannot recommend her highly enough. We have used remedial massage and Bowen for lower leg and back pain, as well as scar tissue therapy after multiple surgeries. Thank you Glo!",
   },
 ];
 
@@ -70,7 +67,7 @@ export default function ReviewsWidget() {
               </p>
               <div className="flex items-center justify-between pt-2 border-t border-border-brand">
                 <span className="text-sm font-semibold text-text-dark">{review.name}</span>
-                <span className="text-xs text-text-muted">{review.date}</span>
+                <span className="text-xs text-text-muted">Google Review</span>
               </div>
             </div>
           ))}
