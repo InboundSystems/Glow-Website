@@ -44,12 +44,8 @@ export default function BookPage() {
             {/* Booking embed */}
             <div className="lg:col-span-2">
               <div className="rounded-2xl border border-border-brand overflow-hidden bg-sage-light min-h-[600px]">
-                {/*
-                  Replace the src below with your myappointments.app embed URL.
-                  Example: https://www.myappointments.app/embed/YOUR_CLINIC_ID
-                */}
                 <iframe
-                  src="https://www.myappointments.app"
+                  src="https://myappointments.app/portal/public/get-embeded-code?business_id=Njk1"
                   width="100%"
                   height="700"
                   style={{ border: 0 }}
@@ -60,7 +56,7 @@ export default function BookPage() {
               <p className="mt-3 text-xs text-text-muted text-center">
                 Having trouble with the booking form?{" "}
                 <a href="tel:+61415020877" className="text-plum hover:underline">
-                  Call us directly
+                  call Gloria directly
                 </a>{" "}
                 or{" "}
                 <Link href="/contact" className="text-plum hover:underline">

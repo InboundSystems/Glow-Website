@@ -60,13 +60,12 @@ export default function HomeContact() {
           {/* LEFT — info */}
           <div className="flex flex-col gap-6">
             <h2 className="font-script text-[2.5rem] font-semibold text-white leading-none">
-              Get in touch with us
+              Get in touch
             </h2>
             <p className="text-white/70 leading-relaxed text-sm">
-              We value each customer&apos;s perspectives and cherish the opportunity to hear
-              from you. Whether you have a question, feedback, or just want to share your
-              thoughts, we encourage you to reach out. Your insights drive us to continually
-              enhance your experience.
+              I&apos;d love to hear from you. Whether you have a question about a service,
+              want to know if treatment is right for you, or simply want to get in touch —
+              reach out any time.
             </p>
 
             <div className="flex flex-col gap-4 text-sm">
@@ -91,11 +90,40 @@ export default function HomeContact() {
             </div>
           </div>
 
-          {/* RIGHT — form */}
-          <div>
-            <p className="text-white text-[1.1rem] font-medium mb-6">
-              We&apos;d love to hear from you!
-            </p>
+          {/* RIGHT — booking CTA + form */}
+          <div className="flex flex-col gap-8">
+            {/* Primary: Book online */}
+            <div className="bg-white/5 border border-white/15 rounded-2xl p-6 flex flex-col gap-3">
+              <p className="text-xs font-medium text-plum uppercase tracking-widest">
+                Ready to book?
+              </p>
+              <h3 className="font-serif text-xl font-bold text-white leading-snug">
+                Book your appointment online
+              </h3>
+              <p className="text-white/70 text-sm leading-relaxed">
+                Use the online booking portal to choose your service, date, and time — available 24/7.
+              </p>
+              <a
+                href="https://myappointments.app/portal/public/get-embeded-code?business_id=Njk1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 mt-1 px-7 py-3 rounded-[50px] bg-plum text-white text-sm font-medium hover:bg-plum-dark transition-colors"
+              >
+                Book an Appointment
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+
+            {/* Divider */}
+            <div className="flex items-center gap-4">
+              <div className="flex-1 border-t border-white/10" />
+              <span className="text-white/40 text-xs uppercase tracking-widest shrink-0">or send a general enquiry</span>
+              <div className="flex-1 border-t border-white/10" />
+            </div>
+
+            {/* Secondary: Contact form */}
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               <input
                 type="text"
@@ -135,9 +163,9 @@ export default function HomeContact() {
               />
               <button
                 type="submit"
-                className="w-full px-7 py-3 rounded-[50px] bg-plum text-white text-sm font-medium hover:bg-plum-dark transition-colors"
+                className="w-full px-7 py-3 rounded-[50px] border-2 border-white/30 text-white text-sm font-medium hover:border-white transition-colors"
               >
-                Send
+                Send Message
               </button>
             </form>
           </div>
