@@ -1,39 +1,11 @@
 import Link from "next/link";
 
 const accreditations = [
-  "Diploma of Remedial Massage, G Academy, QLD",
+  "Diploma of Remedial Massage, Q Academy, QLD",
   "IASTM – Instrument-Assisted Soft Tissue Mobilisation",
-  "Scar Tissue Therapy – CK Massage QLD",
+  "TMJ Massage Therapies — Level 1",
   "ANTA Member (Australian Natural Therapists Association)",
-  "TMJ Dysfunction Course",
   "Insurance – Guild Insurance",
-];
-
-const additionalServices = [
-  {
-    title: "Scar Tissue Therapy",
-    description:
-      "Specialist massage to break down adhesions, improve tissue mobility, and reduce pain around surgical or injury scars.",
-    href: "/scar-tissue-therapy-caboolture",
-  },
-  {
-    title: "Pregnancy Massage",
-    description:
-      "Safe, nurturing massage for expectant mothers — easing back pain, swelling, and the fatigue of pregnancy.",
-    href: "/pregnancy-massage-caboolture",
-  },
-  {
-    title: "Sports Massage",
-    description:
-      "Optimise performance and accelerate recovery. Ideal before events or to manage training load and prevent injury.",
-    href: "/sports-massage-caboolture",
-  },
-  {
-    title: "Lymphatic Drainage",
-    description:
-      "Gentle, rhythmic massage that stimulates lymph flow to reduce swelling and support post-surgical recovery.",
-    href: "/lymphatic-drainage-caboolture",
-  },
 ];
 
 export default function ServicesGrid() {
@@ -43,7 +15,6 @@ export default function ServicesGrid() {
 
         {/* Part A — Feature boxes */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16">
-          {/* Card 1 */}
           <div className="rounded-2xl border border-border-brand bg-white p-6">
             <h3 className="font-semibold text-plum mb-3">Wholistic Assessment</h3>
             <p className="text-sm text-text-muted leading-relaxed">
@@ -53,7 +24,6 @@ export default function ServicesGrid() {
             </p>
           </div>
 
-          {/* Card 2 */}
           <div className="rounded-2xl border border-border-brand bg-white p-6">
             <h3 className="font-semibold text-plum mb-3">My promise to you</h3>
             <p className="text-sm text-text-muted leading-relaxed">
@@ -62,7 +32,6 @@ export default function ServicesGrid() {
             </p>
           </div>
 
-          {/* Card 3 */}
           <div className="rounded-2xl border border-border-brand bg-white p-6">
             <h3 className="font-semibold text-plum mb-3">Accreditations</h3>
             <ul className="flex flex-col gap-1.5 mb-3">
@@ -88,21 +57,33 @@ export default function ServicesGrid() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {/* Remedial Massage */}
           <div className="rounded-2xl border border-border-brand bg-white p-6 flex flex-col gap-4">
             <h3 className="font-bold text-plum text-lg">Remedial Massage Therapy</h3>
             <p className="text-sm text-text-muted leading-relaxed flex-1">
               Our Remedial Massage services offer tailored treatments for targeted relief.
-              Choose a 30-minute session for focused attention, 60 minutes for thorough care
-              and relaxation, or 90 minutes for a comprehensive full-body experience ensuring
-              total rejuvenation.
+              Choose the session length that suits your needs and goals.
             </p>
+            <div className="flex flex-col gap-1.5 text-sm border-t border-border-brand pt-3">
+              <div className="flex justify-between">
+                <span className="text-text-muted">45 mins</span>
+                <span className="font-semibold text-text-dark">$90</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-text-muted">70 mins</span>
+                <span className="font-semibold text-text-dark">$130</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-text-muted">90 mins</span>
+                <span className="font-semibold text-text-dark">$170</span>
+              </div>
+            </div>
             <Link
               href="/remedial-massage-caboolture"
               className="self-start inline-flex items-center justify-center px-6 py-2.5 rounded-[50px] border-2 border-plum text-plum text-sm font-medium hover:bg-plum hover:text-white transition-colors"
             >
-              See prices
+              Learn more
             </Link>
           </div>
 
@@ -111,51 +92,54 @@ export default function ServicesGrid() {
             <h3 className="font-bold text-plum text-lg">Bowen Therapy</h3>
             <p className="text-sm text-text-muted leading-relaxed flex-1">
               Bowen Therapy uses gentle, precise movements to restore balance to the Autonomic
-              Nervous System, promoting the body&apos;s natural healing. It addresses various
-              conditions holistically, including pain, stress, and digestive issues, with
-              treatments lasting 30–60 minutes.
+              Nervous System, promoting the body&apos;s natural healing. Addresses pain, stress,
+              and a wide range of conditions holistically.
             </p>
+            <div className="flex flex-col gap-1.5 text-sm border-t border-border-brand pt-3">
+              <div className="flex justify-between">
+                <span className="text-text-muted">45–60 mins</span>
+                <span className="font-semibold text-text-dark">$110</span>
+              </div>
+            </div>
             <Link
               href="/bowen-therapy-caboolture"
               className="self-start inline-flex items-center justify-center px-6 py-2.5 rounded-[50px] border-2 border-plum text-plum text-sm font-medium hover:bg-plum hover:text-white transition-colors"
             >
-              See prices
+              Learn more
+            </Link>
+          </div>
+
+          {/* TMJ Remedial Treatment */}
+          <div className="rounded-2xl border border-border-brand bg-white p-6 flex flex-col gap-4">
+            <h3 className="font-bold text-plum text-lg">TMJ Remedial Treatment</h3>
+            <p className="text-sm text-text-muted leading-relaxed flex-1">
+              A whole-body approach to treating dysfunction of the TMJ (jaw joint). Addresses
+              the connection between your hips and jaw through fascial trains, including
+              massage of the back, neck, shoulders, glutes, and intra-oral work.
+            </p>
+            <div className="flex flex-col gap-1.5 text-sm border-t border-border-brand pt-3">
+              <div className="flex justify-between">
+                <span className="text-text-muted">Pricing</span>
+                <span className="font-semibold text-plum">Coming soon</span>
+              </div>
+            </div>
+            <Link
+              href="/tmj-treatment-caboolture"
+              className="self-start inline-flex items-center justify-center px-6 py-2.5 rounded-[50px] border-2 border-plum text-plum text-sm font-medium hover:bg-plum hover:text-white transition-colors"
+            >
+              Learn more
             </Link>
           </div>
         </div>
 
         {/* Book CTA */}
-        <div className="flex justify-center mb-16">
+        <div className="flex justify-center">
           <Link
             href="/book"
             className="inline-flex items-center justify-center px-7 py-3 rounded-[50px] border-2 border-plum text-plum text-sm font-medium hover:bg-plum hover:text-white transition-colors"
           >
             Book your session now
           </Link>
-        </div>
-
-        {/* Additional services */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {additionalServices.map((service) => (
-            <div
-              key={service.title}
-              className="rounded-2xl border border-border-brand bg-white p-6 flex flex-col gap-3 hover:shadow-md transition-shadow"
-            >
-              <h3 className="font-semibold text-text-dark">{service.title}</h3>
-              <p className="text-sm text-text-muted leading-relaxed flex-1">
-                {service.description}
-              </p>
-              <Link
-                href={service.href}
-                className="inline-flex items-center gap-1 text-sm font-medium text-plum hover:gap-2 transition-all"
-              >
-                Learn more
-                <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8h10M9 4l4 4-4 4" />
-                </svg>
-              </Link>
-            </div>
-          ))}
         </div>
 
       </div>

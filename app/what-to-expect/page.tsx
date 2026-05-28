@@ -6,14 +6,14 @@ import FaqSchema from "@/components/schema/FaqSchema";
 export const metadata: Metadata = {
   title: "What to Expect",
   description:
-    "Not sure what to expect at your first massage or Bowen therapy appointment? We walk you through every step — from booking to aftercare.",
+    "Not sure what to expect at your first massage or Bowen therapy appointment? I walk you through every step — from booking to aftercare.",
 };
 
 const steps = [
   {
     number: "01",
     title: "Book Your Appointment",
-    body: "Book online at any time, or call Gloria directly during business hours. When you book, you'll have the option to add a note about what you'd like help with — this helps Gloria prepare for your session. First-time clients are encouraged to arrive 10 minutes early.",
+    body: "Book online at any time, or call me directly during business hours. When you book, you'll have the option to add a note about what you'd like help with — this helps me prepare for your session.",
     tip: "Not sure which service is right for you? Call first and Gloria will help you decide.",
   },
   {
@@ -38,7 +38,7 @@ const steps = [
     number: "05",
     title: "Aftercare & Next Steps",
     body: "After your session, Gloria will share any specific aftercare advice. Drink plenty of water, rest if you need to, and avoid strenuous exercise for the remainder of the day. You may feel deeply relaxed, or slightly tender in areas that were worked — both are normal. Many clients notice continued improvement over the 24-48 hours after a session.",
-    tip: "If you have a health fund card, you can claim your HICAPS rebate on the spot before you leave.",
+    tip: "If you have a health fund card, you can claim your HICAPS rebate on the spot before you leave (remedial massage only).",
   },
 ];
 
@@ -61,7 +61,7 @@ const faqs = [
   },
   {
     q: "Can I claim a rebate from my health fund?",
-    a: "Yes — Glow in Wellness is a registered HICAPS provider. Bring your health fund card and claim on the spot at the time of your appointment. Cover varies by fund and policy; contact your insurer if you're unsure of your entitlements.",
+    a: "Yes — for remedial massage. Glow in Wellness is a registered HICAPS provider, so you can claim your rebate on the spot at the time of your appointment. Please note that Bowen Therapy is not covered by health funds. Cover for remedial massage varies by fund and policy; contact your insurer to confirm your entitlements.",
   },
 ];
 

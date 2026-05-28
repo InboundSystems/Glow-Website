@@ -5,7 +5,7 @@ import BreadcrumbSchema from "@/components/schema/BreadcrumbSchema";
 export const metadata: Metadata = {
   title: "Massage Caboolture | All Services",
   description:
-    "Massage therapy in Caboolture with Gloria Mullaly at Glow in Wellness. Remedial massage, Bowen therapy, pregnancy massage, sports massage, lymphatic drainage, and scar tissue therapy. HICAPS rebates available.",
+    "Massage therapy in Caboolture with Gloria Mullaly at Glow in Wellness. Remedial massage, Bowen therapy, and TMJ Remedial Treatment. HICAPS rebates available on remedial massage.",
   keywords: [
     "massage Caboolture",
     "massage therapist Caboolture",
@@ -31,31 +31,10 @@ const services = [
     badge: "Uncontested in Caboolture",
   },
   {
-    title: "Pregnancy Massage",
+    title: "TMJ Remedial Treatment",
     description:
-      "Safe, nurturing massage for expectant mothers at every stage of pregnancy. Eases back pain, swelling, and fatigue.",
-    href: "/pregnancy-massage-caboolture",
-    badge: "HICAPS",
-  },
-  {
-    title: "Sports Massage",
-    description:
-      "Targeted treatment to reduce soreness, improve performance, and prevent injury. For all activity levels.",
-    href: "/sports-massage-caboolture",
-    badge: "HICAPS",
-  },
-  {
-    title: "Lymphatic Drainage",
-    description:
-      "Gentle, rhythmic massage that stimulates lymph flow to reduce swelling and support post-surgical recovery.",
-    href: "/lymphatic-drainage-caboolture",
-    badge: "HICAPS",
-  },
-  {
-    title: "Scar Tissue Therapy",
-    description:
-      "Specialist massage to break down adhesions, improve tissue mobility, and reduce pain around surgical or injury scars.",
-    href: "/scar-tissue-therapy-caboolture",
+      "A whole-body approach to treating jaw joint dysfunction through fascial connections — addressing the back, neck, shoulders, glutes, and intra-oral tissue.",
+    href: "/tmj-treatment-caboolture",
     badge: "Specialist Service",
   },
 ];
@@ -172,7 +151,7 @@ export default function MassageCabooltureePage() {
             {[
               {
                 title: "Qualified and experienced",
-                body: "Gloria holds a Diploma of Remedial Massage, is a certified Bowen Therapy practitioner, and is a registered member of the Australian Association of Massage Therapists.",
+                body: "Gloria holds a Diploma of Remedial Massage from Q Academy, is a certified Bowen Therapy practitioner, a TMJ Massage Therapies Level 1 graduate, and a proud member of ANTA — the Australian Natural Therapists Association.",
               },
               {
                 title: "Every session is personalised",
@@ -180,7 +159,7 @@ export default function MassageCabooltureePage() {
               },
               {
                 title: "HICAPS on the spot",
-                body: "As a registered HICAPS provider, Gloria can process your health fund claim immediately at your appointment. No receipts, no waiting.",
+                body: "As a registered HICAPS provider, Gloria can process your health fund claim for remedial massage immediately at your appointment. No receipts, no waiting.",
               },
               {
                 title: "Rare expertise in Caboolture",

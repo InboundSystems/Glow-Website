@@ -10,21 +10,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 1,
     },
-    // Category hub
     {
       url: `${BASE_URL}/massage-caboolture`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.95,
     },
-    // Primary money keyword
     {
       url: `${BASE_URL}/remedial-massage-caboolture`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.95,
     },
-    // Uncontested pages
     {
       url: `${BASE_URL}/bowen-therapy-caboolture`,
       lastModified: new Date(),
@@ -32,31 +29,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
-      url: `${BASE_URL}/scar-tissue-therapy-caboolture`,
+      url: `${BASE_URL}/tmj-treatment-caboolture`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
     },
-    // Remaining service pages
-    {
-      url: `${BASE_URL}/pregnancy-massage-caboolture`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${BASE_URL}/sports-massage-caboolture`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${BASE_URL}/lymphatic-drainage-caboolture`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    // Supporting pages
     {
       url: `${BASE_URL}/about`,
       lastModified: new Date(),

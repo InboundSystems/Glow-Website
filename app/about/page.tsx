@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 const qualifications = [
-  "Diploma of Remedial Massage, G Academy, QLD",
+  "Diploma of Remedial Massage, Q Academy, QLD",
   "Certified Bowen Therapy Practitioner",
   "IASTM – Instrument-Assisted Soft Tissue Mobilisation",
   "Scar Tissue Therapy – CK Massage QLD",
@@ -66,21 +66,29 @@ export default function AboutPage() {
               <div className="flex flex-col gap-4">
                 <h2 className="font-serif text-2xl font-bold text-text-dark">My Story</h2>
                 <p className="text-text-muted leading-relaxed">
-                  I&apos;ve always been drawn to the idea that the body has an
-                  incredible ability to heal itself when given the right
-                  conditions. My journey into remedial massage and Bowen
-                  therapy started with a personal experience — I&apos;d been
-                  struggling with chronic back pain and conventional approaches
-                  weren&apos;t giving me lasting relief. A single Bowen session
-                  changed everything.
+                  I came to massage therapy not from personal pain, but from the
+                  juggle of family and work. I had two young boys and was working
+                  in hospitality, and I was finding the demands of the industry
+                  were making it hard to be truly present for them.
                 </p>
                 <p className="text-text-muted leading-relaxed">
-                  That experience motivated me to train properly, learn deeply,
-                  and eventually build a practice here in Caboolture where I
-                  could offer the same kind of relief to others. Every person
-                  who walks through my door gets my full attention — not a
-                  cookie-cutter treatment, but a session designed around your
-                  specific body, history, and goals.
+                  I had always been drawn to massage, so I visited Q Academy&apos;s
+                  Sunshine Coast Campus — and from the moment I walked in, it felt
+                  like exactly where I was supposed to be.
+                </p>
+                <p className="text-text-muted leading-relaxed">
+                  The course started with relaxation techniques. Through practising
+                  on friends and family, I began to see first-hand how much massage
+                  could ease people&apos;s pain and tension. But when the course moved
+                  into remedial massage, my love for this work deepened completely.
+                  Learning to find the root cause of pain — rather than simply
+                  treating the symptoms — felt like a whole new world opening up.
+                  The idea that I could help people move more freely and live more
+                  comfortably is what drives everything I do.
+                </p>
+                <p className="text-text-muted leading-relaxed">
+                  That sense of purpose is what brought me to Caboolture, and
+                  it&apos;s what keeps me here.
                 </p>
               </div>
 

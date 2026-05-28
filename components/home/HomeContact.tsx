@@ -4,8 +4,8 @@ import { useState } from "react";
 
 const hours = [
   { day: "Monday",             time: "Closed" },
-  { day: "Tuesday – Thursday", time: "09:00 am – 07:00 pm" },
-  { day: "Friday",             time: "10:00 am – 02:00 pm" },
+  { day: "Tuesday – Thursday", time: "9:00 am – 2:00 pm" },
+  { day: "Friday",             time: "12:00 pm – 2:00 pm" },
   { day: "Saturday",           time: "Closed" },
   { day: "Evenings & Sundays", time: "By Appointment" },
 ];
@@ -73,7 +73,7 @@ export default function HomeContact() {
               <div className="flex gap-3">
                 <span className="font-semibold text-plum shrink-0 w-16">Address</span>
                 <span className="text-white/80">
-                  Level 1, Shop 5, 29 King Street, Caboolture Queensland 4510, Australia
+                  Level 1 R1, 20 King Street, Caboolture Queensland 4510, Australia
                 </span>
               </div>
               <div className="flex gap-3">

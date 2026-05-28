@@ -8,7 +8,6 @@ const navLinks = [
   { href: "/massage-caboolture", label: "Services" },
   { href: "/about", label: "About Us" },
   { href: "/products", label: "Products" },
-  { href: "/blogs", label: "Blogs" },
   { href: "/contact", label: "Contact" },
 ];
 

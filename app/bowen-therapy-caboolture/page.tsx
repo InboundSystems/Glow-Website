@@ -35,7 +35,6 @@ const benefits = [
   "No oils, no deep pressure — sessions can be done over light clothing",
   "Effective for chronic, long-standing conditions others haven't resolved",
   "Cumulative healing — each session builds on the last",
-  "HICAPS health fund rebates available on the spot",
 ];
 
 const expectSteps = [
@@ -85,7 +84,7 @@ const faqs = [
   {
     question: "Can I claim Bowen Therapy on my health fund?",
     answer:
-      "Many Australian health funds cover Bowen Therapy under their natural therapies or remedial therapy extras. Glow in Wellness is a registered HICAPS provider, so if your fund covers the treatment you can claim your rebate on the spot at the time of your appointment. Check your specific policy or call us to find out more.",
+      "Unfortunately Bowen Therapy is not covered by Australian health funds. Only remedial massage treatments are eligible for on-the-spot HICAPS rebates at Glow in Wellness. If you're looking for a health fund claimable treatment, Gloria's remedial massage services are HICAPS registered.",
   },
   {
     question: "Is Bowen Therapy safe during pregnancy?",
@@ -96,7 +95,7 @@ const faqs = [
 
 const relatedServices = [
   { name: "Remedial Massage", href: "/remedial-massage-caboolture" },
-  { name: "Scar Tissue Therapy", href: "/scar-tissue-therapy-caboolture" },
+  { name: "TMJ Remedial Treatment", href: "/tmj-treatment-caboolture" },
 ];
 
 export default function BowenTherapyCabooltureePage() {
@@ -107,7 +106,6 @@ export default function BowenTherapyCabooltureePage() {
       intro="Gloria Mullaly is one of very few certified Bowen Therapy practitioners in Caboolture and the wider Moreton Bay region. If you've been searching for Bowen therapy near you, you've found it."
       benefits={benefits}
       expectSteps={expectSteps}
-      showHicaps
       faqs={faqs}
       relatedServices={relatedServices}
     >

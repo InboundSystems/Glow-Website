@@ -3,17 +3,51 @@
 import { useState } from "react";
 import Image from "next/image";
 
-type Category = "All" | "Mask" | "Creams" | "Others";
+type Category = "All" | "Mask" | "Others";
 
-const products = [
-  { name: "Green Serum",         category: "Creams", price: 45.0,  inStock: true  },
-  { name: "Mask 1",              category: "Mask",   price: 25.0,  inStock: false },
-  { name: "Steam Eye Mask",      category: "Mask",   price: 15.0,  inStock: true  },
-  { name: "Steam Eye Mask Pack", category: "Mask",   price: 28.0,  inStock: true  },
-  { name: "Kinesiology Tape",    category: "Others", price: 20.0,  inStock: true  },
-] as const;
+const products: {
+  name: string;
+  category: Category;
+  price: number;
+  inStock: boolean;
+  note?: string;
+}[] = [
+  {
+    name: "Steam Eye Mask",
+    category: "Mask",
+    price: 5.0,
+    inStock: true,
+    note: "Available in Unscented, Lavender & Chamomile",
+  },
+  {
+    name: "GIW Muscle Balm",
+    category: "Others",
+    price: 25.0,
+    inStock: true,
+    note: "Made in-house — clients love it for pain relief",
+  },
+  {
+    name: "Rocktape Kinesiology Tape",
+    category: "Others",
+    price: 20.0,
+    inStock: true,
+  },
+  {
+    name: "The Patch Remedy Vitamin Patches",
+    category: "Others",
+    price: 30.0,
+    inStock: true,
+    note: "Limited stock — select packs available",
+  },
+  {
+    name: "Recovery Tools Cupping Set",
+    category: "Others",
+    price: 50.0,
+    inStock: true,
+  },
+];
 
-const tabs: Category[] = ["All", "Mask", "Creams", "Others"];
+const tabs: Category[] = ["All", "Mask", "Others"];
 
 export default function ProductsSection() {
   const [active, setActive] = useState<Category>("All");
@@ -54,11 +88,10 @@ export default function ProductsSection() {
               key={product.name}
               className="rounded-2xl border border-border-brand bg-white overflow-hidden"
             >
-              {/* Image */}
+              {/* Image placeholder — TODO: replace with real product photos once provided */}
               <div className="relative aspect-square bg-gray-100">
-                {/* TODO: replace with real product images */}
                 <Image
-                  src={`https://placehold.co/300x300/e8d5f5/8800CC?text=${encodeURIComponent(product.name)}`}
+                  src={`https://placehold.co/300x300/f5f0ff/8800CC?text=${encodeURIComponent(product.name)}`}
                   alt={product.name}
                   fill
                   className="object-cover"
@@ -76,6 +109,9 @@ export default function ProductsSection() {
               {/* Info */}
               <div className="p-4">
                 <p className="font-bold text-text-dark text-sm">{product.name}</p>
+                {product.note && (
+                  <p className="text-xs text-text-muted mt-0.5">{product.note}</p>
+                )}
                 <p className="text-text-muted text-sm mt-1">
                   Price: ${product.price.toFixed(2)}
                 </p>

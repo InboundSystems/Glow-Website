@@ -31,7 +31,7 @@ export default function Footer() {
               0415 020 877
             </a>
             <address className="not-italic text-sm text-white/50 leading-relaxed">
-              Level 1, Shop 5, 29 King Street
+              Level 1 R1, 20 King Street
               <br />
               Caboolture Queensland 4510, Australia
             </address>

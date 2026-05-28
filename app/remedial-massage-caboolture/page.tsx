@@ -73,7 +73,7 @@ const faqs = [
   {
     question: "Can I claim remedial massage on my health fund?",
     answer:
-      "Yes — most Australian private health funds cover remedial massage under their extras cover. Glow in Wellness is a registered HICAPS provider, which means you can claim your rebate on the spot at the time of your appointment. No receipts, no waiting, no paperwork. Bring your health fund card and we'll process it for you. Cover varies by fund and policy — call us or check your fund's app to confirm your entitlements.",
+      "Yes — most Australian private health funds cover remedial massage under their extras cover. Glow in Wellness is a registered HICAPS provider, which means you can claim your rebate on the spot at the time of your appointment. No receipts, no waiting, no paperwork. Bring your health fund card and I'll process it for you. Cover varies by fund and policy — check your fund's app to confirm your entitlements.",
   },
   {
     question: "How often should I get a remedial massage?",
@@ -88,13 +88,13 @@ const faqs = [
   {
     question: "What conditions does remedial massage treat?",
     answer:
-      "Remedial massage is effective for a wide range of musculoskeletal conditions including back pain, neck and shoulder tension, headaches, sciatica, sports injuries, postural pain from desk work, hip and knee pain, plantar fasciitis, and repetitive strain injuries. If you're unsure whether remedial massage is right for your condition, call us — Gloria is happy to discuss your situation before you book.",
+      "Remedial massage is effective for a wide range of musculoskeletal conditions including back pain, neck and shoulder tension, headaches, sciatica, sports injuries, postural pain from desk work, hip and knee pain, plantar fasciitis, and repetitive strain injuries. If you're unsure whether remedial massage is right for your condition, call or message — I'm happy to discuss your situation before you book.",
   },
 ];
 
 const relatedServices = [
   { name: "Bowen Therapy", href: "/bowen-therapy-caboolture" },
-  { name: "Sports Massage", href: "/sports-massage-caboolture" },
+  { name: "TMJ Remedial Treatment", href: "/tmj-treatment-caboolture" },
 ];
 
 export default function RemedialMassageCabooltureePage() {
@@ -130,7 +130,7 @@ export default function RemedialMassageCabooltureePage() {
       </p>
 
       <h2 className="font-serif text-2xl font-bold text-text-dark mb-4 mt-10">
-        Conditions We Treat
+        Conditions I Treat
       </h2>
       <p className="text-text-muted leading-relaxed mb-4">
         Remedial massage at Glow in Wellness is effective for a wide range of musculoskeletal

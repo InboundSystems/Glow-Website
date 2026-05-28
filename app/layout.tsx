@@ -50,7 +50,7 @@ const jsonLd = {
   currenciesAccepted: "AUD",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Level 1, Shop 5, 29 King Street",
+    streetAddress: "Level 1 R1, 20 King Street",
     addressLocality: "Caboolture",
     addressRegion: "QLD",
     postalCode: "4510",
