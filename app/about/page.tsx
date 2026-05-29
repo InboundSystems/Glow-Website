@@ -154,9 +154,22 @@ export default function AboutPage() {
                     </li>
                   ))}
                 </ul>
-                <p className="text-xs text-text-muted/60 italic">
-                  Official training badges and certificates coming soon.
-                </p>
+                <div className="flex flex-wrap items-center gap-4 pt-2">
+                  <Image
+                    src="/badge-anta.jpg"
+                    alt="ANTA Member — Australian Natural Therapists Association"
+                    width={70}
+                    height={70}
+                    className="rounded-lg object-contain"
+                  />
+                  <Image
+                    src="/badge-tmj-level1.png"
+                    alt="TMJ Massage Therapies Level 1 Graduate"
+                    width={70}
+                    height={70}
+                    className="rounded-lg object-contain"
+                  />
+                </div>
               </div>
 
               {/* ANTA & TMJ callout */}

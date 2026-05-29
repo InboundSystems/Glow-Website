@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const accreditations = [
   "Diploma of Remedial Massage, Q Academy, QLD",
@@ -42,7 +43,22 @@ export default function ServicesGrid() {
                 </li>
               ))}
             </ul>
-            <p className="text-xs text-text-muted/60 italic">Training badges coming soon.</p>
+            <div className="flex flex-wrap items-center gap-3 pt-1">
+              <Image
+                src="/badge-anta.jpg"
+                alt="ANTA Member — Australian Natural Therapists Association"
+                width={56}
+                height={56}
+                className="rounded-md object-contain"
+              />
+              <Image
+                src="/badge-tmj-level1.png"
+                alt="TMJ Massage Therapies Level 1 Graduate"
+                width={56}
+                height={56}
+                className="rounded-md object-contain"
+              />
+            </div>
           </div>
         </div>
 
