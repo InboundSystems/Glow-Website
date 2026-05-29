@@ -1,3 +1,7 @@
+"use client";
+
+import FadeIn from "@/components/ui/FadeIn";
+
 const reviews = [
   {
     name: "Sandra Dare",
@@ -32,7 +36,7 @@ export default function ReviewsWidget() {
   return (
     <section className="bg-cream py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
+        <FadeIn className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
           <div>
             <h2 className="font-script text-3xl sm:text-4xl font-semibold text-white mb-2">
               What Clients Say
@@ -53,23 +57,22 @@ export default function ReviewsWidget() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 8h10M9 4l4 4-4 4" />
             </svg>
           </a>
-        </div>
+        </FadeIn>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {reviews.map((review) => (
-            <div
-              key={review.name}
-              className="bg-white rounded-2xl p-6 flex flex-col gap-4 border border-border-brand"
-            >
-              <StarRating count={review.rating} />
-              <p className="text-sm text-text-muted leading-relaxed flex-1">
-                &ldquo;{review.text}&rdquo;
-              </p>
-              <div className="flex items-center justify-between pt-2 border-t border-border-brand">
-                <span className="text-sm font-semibold text-text-dark">{review.name}</span>
-                <span className="text-xs text-text-muted">Google Review</span>
+          {reviews.map((review, i) => (
+            <FadeIn key={review.name} delay={i * 0.12}>
+              <div className="bg-white rounded-2xl p-6 flex flex-col gap-4 border border-border-brand h-full">
+                <StarRating count={review.rating} />
+                <p className="text-sm text-text-muted leading-relaxed flex-1">
+                  &ldquo;{review.text}&rdquo;
+                </p>
+                <div className="flex items-center justify-between pt-2 border-t border-border-brand">
+                  <span className="text-sm font-semibold text-text-dark">{review.name}</span>
+                  <span className="text-xs text-text-muted">Google Review</span>
+                </div>
               </div>
-            </div>
+            </FadeIn>
           ))}
         </div>
       </div>

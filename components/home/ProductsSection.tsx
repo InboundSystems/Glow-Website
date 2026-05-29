@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import FadeIn from "@/components/ui/FadeIn";
 
 type Category = "All" | "Mask" | "Others";
 
@@ -60,12 +61,14 @@ export default function ProductsSection() {
     <section className="bg-white py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <h2 className="font-script text-[2.5rem] font-semibold text-plum text-center mb-6">
-          Products available in clinic
-        </h2>
+        <FadeIn>
+          <h2 className="font-script text-[2.5rem] font-semibold text-plum text-center mb-6">
+            Products available in clinic
+          </h2>
+        </FadeIn>
 
         {/* Filter tabs */}
-        <div className="flex flex-wrap justify-center gap-3 mb-10">
+        <FadeIn delay={0.1} className="flex flex-wrap justify-center gap-3 mb-10">
           {tabs.map((tab) => (
             <button
               key={tab}
@@ -79,13 +82,13 @@ export default function ProductsSection() {
               {tab}
             </button>
           ))}
-        </div>
+        </FadeIn>
 
         {/* Product grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {visible.map((product) => (
+          {visible.map((product, i) => (
+            <FadeIn key={product.name} delay={i * 0.1}>
             <div
-              key={product.name}
               className="rounded-2xl border border-border-brand bg-white overflow-hidden"
             >
               {/* Image placeholder — TODO: replace with real product photos once provided */}
@@ -117,6 +120,7 @@ export default function ProductsSection() {
                 </p>
               </div>
             </div>
+            </FadeIn>
           ))}
         </div>
 

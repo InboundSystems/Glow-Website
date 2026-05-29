@@ -1,6 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
-
+import FadeIn from "@/components/ui/FadeIn";
 
 export default function AboutTeaser() {
   return (
@@ -9,7 +11,7 @@ export default function AboutTeaser() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
 
           {/* Text column */}
-          <div className="flex flex-col gap-5 order-2 lg:order-1">
+          <FadeIn direction="left" className="flex flex-col gap-5 order-2 lg:order-1">
             <h2 className="font-script text-[2.5rem] font-semibold text-plum leading-none">
               Meet Gloria
             </h2>
@@ -61,10 +63,10 @@ export default function AboutTeaser() {
                 About Gloria
               </Link>
             </div>
-          </div>
+          </FadeIn>
 
-          {/* Photo column — order-1 on mobile so it appears above text */}
-          <div className="order-1 lg:order-2 relative min-h-[400px] lg:min-h-0">
+          {/* Photo column */}
+          <FadeIn direction="right" className="order-1 lg:order-2 relative min-h-[400px] lg:min-h-0">
             <div className="absolute inset-0 rounded-2xl overflow-hidden">
               <Image
                 src="/gloria.jpg"
@@ -74,7 +76,7 @@ export default function AboutTeaser() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
-          </div>
+          </FadeIn>
 
         </div>
       </div>

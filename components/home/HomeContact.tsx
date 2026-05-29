@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import FadeIn from "@/components/ui/FadeIn";
 
 const hours = [
   { day: "Monday",             time: "Closed" },
@@ -58,7 +59,7 @@ export default function HomeContact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
 
           {/* LEFT — info */}
-          <div className="flex flex-col gap-6">
+          <FadeIn direction="left" className="flex flex-col gap-6">
             <h2 className="font-script text-[2.5rem] font-semibold text-white leading-none">
               Get in touch
             </h2>
@@ -88,10 +89,10 @@ export default function HomeContact() {
                 </a>
               </div>
             </div>
-          </div>
+          </FadeIn>
 
           {/* RIGHT — booking CTA + form */}
-          <div className="flex flex-col gap-8">
+          <FadeIn direction="right" delay={0.1} className="flex flex-col gap-8">
             {/* Primary: Book online */}
             <div className="bg-white/5 border border-white/15 rounded-2xl p-6 flex flex-col gap-3">
               <p className="text-xs font-medium text-plum uppercase tracking-widest">
@@ -168,7 +169,7 @@ export default function HomeContact() {
                 Send Message
               </button>
             </form>
-          </div>
+          </FadeIn>
         </div>
 
         {/* Divider */}
