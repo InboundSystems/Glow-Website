@@ -13,7 +13,7 @@ const products: {
   note?: string;
 }[] = [
   {
-    name: "Steam Eye Mask",
+    name: "Self Warming Eye Mask",
     category: "Mask",
     price: 5.0,
     inStock: true,
