@@ -31,57 +31,51 @@ export const homeFaqs = [
 
 export default function HomeFaqSection() {
   return (
-    <section className="bg-white py-16">
+    <section className="bg-sage-light py-16">
       <FaqSchema faqs={homeFaqs} />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="font-serif text-3xl sm:text-4xl font-bold text-text-dark mb-10">
-          Frequently Asked Questions
-        </h2>
-        <div className="flex flex-col divide-y divide-border-brand">
+
+        <div className="text-center mb-10">
+          <p className="text-xs font-medium text-plum uppercase tracking-widest mb-3">Got questions?</p>
+          <h2 className="font-script text-3xl sm:text-4xl font-semibold text-plum">
+            Frequently Asked Questions
+          </h2>
+        </div>
+
+        <div className="flex flex-col gap-3">
           {homeFaqs.map((faq) => (
-            <details key={faq.question} className="group py-5">
-              <summary className="flex items-center justify-between gap-4 cursor-pointer list-none">
-                <h3 className="font-serif text-lg font-semibold text-text-dark">
+            <details key={faq.question} className="group bg-white rounded-2xl border border-border-brand overflow-hidden">
+              <summary className="flex items-center justify-between gap-4 cursor-pointer list-none px-6 py-5 hover:bg-sage-light transition-colors">
+                <h3 className="font-serif text-base font-semibold text-text-dark">
                   {faq.question}
                 </h3>
-                <svg
-                  className="w-5 h-5 text-plum shrink-0 transition-transform group-open:rotate-45"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 4v16m8-8H4"
-                  />
-                </svg>
+                <div className="w-6 h-6 rounded-full bg-sage-light flex items-center justify-center shrink-0 group-open:bg-plum transition-colors">
+                  <svg
+                    className="w-3.5 h-3.5 text-plum group-open:text-white transition-all duration-200 group-open:rotate-45"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2.5}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
+                  </svg>
+                </div>
               </summary>
-              <p className="mt-3 text-text-muted leading-relaxed text-sm">
-                {faq.answer}
-              </p>
+              <div className="px-6 pb-5 pt-1 border-t border-border-brand">
+                <p className="text-text-muted leading-relaxed text-sm">{faq.answer}</p>
+              </div>
             </details>
           ))}
         </div>
+
         <div className="mt-10 text-center">
           <Link
             href="/what-to-expect"
             className="inline-flex items-center gap-1.5 text-sm font-medium text-plum hover:text-plum-dark transition-colors"
           >
             See what to expect at your first visit
-            <svg
-              className="w-4 h-4"
-              viewBox="0 0 16 16"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={1.5}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3 8h10M9 4l4 4-4 4"
-              />
+            <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={1.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 8h10M9 4l4 4-4 4" />
             </svg>
           </Link>
         </div>

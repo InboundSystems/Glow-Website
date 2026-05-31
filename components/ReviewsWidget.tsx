@@ -36,35 +36,42 @@ export default function ReviewsWidget() {
   return (
     <section className="bg-cream py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <FadeIn className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
-          <div>
-            <h2 className="font-script text-3xl sm:text-4xl font-semibold text-white mb-2">
-              What Clients Say
-            </h2>
-            <div className="flex items-center gap-2">
-              <StarRating count={5} />
-              <span className="text-sm text-white/60">5.0 on Google Reviews</span>
+        <FadeIn className="mb-10">
+          <p className="text-xs font-medium text-plum uppercase tracking-widest mb-3">Client stories</p>
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+            <div>
+              <h2 className="font-script text-3xl sm:text-4xl font-semibold text-white mb-2">
+                What Clients Say
+              </h2>
+              <div className="flex items-center gap-2">
+                <StarRating count={5} />
+                <span className="text-sm text-white/60">5.0 on Google Reviews</span>
+              </div>
             </div>
+            <a
+              href="https://www.google.com/maps/search/Glow+in+Wellness+Caboolture"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-white/60 hover:text-white transition-colors shrink-0"
+            >
+              See all reviews
+              <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 8h10M9 4l4 4-4 4" />
+              </svg>
+            </a>
           </div>
-          <a
-            href="https://www.google.com/maps/search/Glow+in+Wellness+Caboolture"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-white/60 hover:text-white transition-colors shrink-0"
-          >
-            See all reviews
-            <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={1.5}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3 8h10M9 4l4 4-4 4" />
-            </svg>
-          </a>
         </FadeIn>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {reviews.map((review, i) => (
             <FadeIn key={review.name} delay={i * 0.12}>
-              <div className="bg-white rounded-2xl p-6 flex flex-col gap-4 border border-border-brand h-full">
+              <div className="bg-white rounded-2xl p-6 flex flex-col gap-4 border border-border-brand h-full relative overflow-hidden hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
+                {/* Decorative quote mark */}
+                <span className="absolute top-3 right-4 font-serif text-[5rem] leading-none text-plum/8 select-none pointer-events-none">
+                  &ldquo;
+                </span>
                 <StarRating count={review.rating} />
-                <p className="text-sm text-text-muted leading-relaxed flex-1">
+                <p className="text-sm text-text-muted leading-relaxed flex-1 relative">
                   &ldquo;{review.text}&rdquo;
                 </p>
                 <div className="flex items-center justify-between pt-2 border-t border-border-brand">

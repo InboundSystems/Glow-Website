@@ -61,8 +61,9 @@ export default function ProductsSection() {
     <section className="bg-white py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <FadeIn>
-          <h2 className="font-script text-[2.5rem] font-semibold text-plum text-center mb-6">
+        <FadeIn className="text-center mb-6">
+          <p className="text-xs font-medium text-plum uppercase tracking-widest mb-3">Take home</p>
+          <h2 className="font-script text-[2.5rem] font-semibold text-plum">
             Products available in clinic
           </h2>
         </FadeIn>
@@ -89,7 +90,7 @@ export default function ProductsSection() {
           {visible.map((product, i) => (
             <FadeIn key={product.name} delay={i * 0.1}>
             <div
-              className="rounded-2xl border border-border-brand bg-white overflow-hidden"
+              className="rounded-2xl border border-border-brand bg-white overflow-hidden hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 h-full"
             >
               {/* Image placeholder — TODO: replace with real product photos once provided */}
               <div className="relative aspect-square bg-gray-100">

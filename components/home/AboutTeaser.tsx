@@ -12,6 +12,7 @@ export default function AboutTeaser() {
 
           {/* Text column */}
           <FadeIn direction="left" className="flex flex-col gap-5 order-2 lg:order-1">
+            <p className="text-xs font-medium text-plum uppercase tracking-widest">Your therapist</p>
             <h2 className="font-script text-[2.5rem] font-semibold text-plum leading-none">
               Meet Gloria
             </h2>
@@ -67,7 +68,7 @@ export default function AboutTeaser() {
 
           {/* Photo column */}
           <FadeIn direction="right" className="order-1 lg:order-2 relative min-h-[400px] lg:min-h-0">
-            <div className="absolute inset-0 rounded-2xl overflow-hidden">
+            <div className="absolute inset-0 rounded-2xl overflow-hidden ring-4 ring-plum/10">
               <Image
                 src="/gloria.jpg"
                 alt="Gloria Mullaly — remedial massage therapist and Bowen practitioner, Caboolture"

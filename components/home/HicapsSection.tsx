@@ -23,7 +23,7 @@ export default function HicapsSection() {
           </span>
         </div>
 
-        <h2 className="font-script text-3xl sm:text-4xl font-semibold text-white mb-4">
+        <h2 className="font-script text-3xl sm:text-4xl font-semibold text-white mb-4 mt-2">
           Health Fund Rebates On the Spot
         </h2>
         <p className="text-white/80 max-w-2xl mx-auto mb-8 leading-relaxed">
