@@ -4,7 +4,7 @@ export default function MobileStickyBar() {
   return (
     <div className="md:hidden fixed bottom-0 inset-x-0 z-50 bg-white border-t border-border-brand px-4 py-3 flex gap-3 shadow-[0_-2px_12px_rgba(0,0,0,0.06)]">
       <a
-        href="tel:+61415020877"
+        href="tel:+61413502977"
         className="flex-1 flex items-center justify-center gap-2 rounded-[50px] border-2 border-plum text-plum font-medium text-sm py-2.5 hover:bg-plum hover:text-white transition-colors"
       >
         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

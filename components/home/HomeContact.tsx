@@ -78,8 +78,8 @@ export default function HomeContact() {
               </div>
               <div className="flex gap-3">
                 <span className="font-semibold text-plum shrink-0 w-16">Phone</span>
-                <a href="tel:+61415020877" className="text-white/80 hover:text-white transition-colors">
-                  0415 020 877
+                <a href="tel:+61413502977" className="text-white/80 hover:text-white transition-colors">
+                  0413 502 977
                 </a>
               </div>
               <div className="flex gap-3">

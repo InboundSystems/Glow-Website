@@ -70,8 +70,8 @@ export default function BookPage() {
                 </a>
                 <p className="text-xs text-text-muted">
                   Prefer to call?{" "}
-                  <a href="tel:+61415020877" className="text-plum hover:underline">
-                    0415 020 877
+                  <a href="tel:+61413502977" className="text-plum hover:underline">
+                    0413 502 977
                   </a>
                   {" "}or{" "}
                   <Link href="/contact" className="text-plum hover:underline">
@@ -92,7 +92,7 @@ export default function BookPage() {
                   Gloria is happy to take bookings over the phone during business hours.
                 </p>
                 <a
-                  href="tel:+61415020877"
+                  href="tel:+61413502977"
                   className="inline-flex items-center gap-2 text-plum font-semibold hover:text-plum-dark transition-colors mt-1"
                 >
                   <svg
@@ -108,7 +108,7 @@ export default function BookPage() {
                       d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                     />
                   </svg>
-                  0415 020 877
+                  0413 502 977
                 </a>
               </div>
 

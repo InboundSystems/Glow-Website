@@ -57,10 +57,10 @@ export default function ContactPage() {
                   Phone
                 </h3>
                 <a
-                  href="tel:+61415020877"
+                  href="tel:+61413502977"
                   className="text-xl font-serif font-semibold text-plum hover:text-plum-dark transition-colors"
                 >
-                  0415 020 877
+                  0413 502 977
                 </a>
                 <p className="text-sm text-text-muted">
                   Prefer to call? Gloria is happy to answer questions and take

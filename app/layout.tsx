@@ -43,7 +43,7 @@ const jsonLd = {
   description:
     "Remedial massage and Bowen therapy in Caboolture, Queensland. On-the-spot HICAPS health fund rebates available.",
   url: "https://glowinwellness.com.au",
-  telephone: "+61415020877",
+  telephone: "+61413502977",
   email: "info@glowinwellness.com.au",
   priceRange: "$$",
   paymentAccepted: "Cash, Credit Card, HICAPS",

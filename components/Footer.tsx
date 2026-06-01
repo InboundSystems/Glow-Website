@@ -25,10 +25,10 @@ export default function Footer() {
               you move, feel, and live better.
             </p>
             <a
-              href="tel:+61415020877"
+              href="tel:+61413502977"
               className="text-sm text-plum hover:text-white transition-colors"
             >
-              0415 020 877
+              0413 502 977
             </a>
             <address className="not-italic text-sm text-white/50 leading-relaxed">
               Level 1 R1, 20 King Street
