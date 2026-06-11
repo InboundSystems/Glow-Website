@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import BreadcrumbSchema from "@/components/schema/BreadcrumbSchema";
 import FaqSchema from "@/components/schema/FaqSchema";
 
@@ -84,6 +85,20 @@ export default function WhatToExpectPage() {
             First time? Here&apos;s exactly what happens from the moment you
             book to the moment you leave — so there are no surprises, just calm.
           </p>
+        </div>
+      </section>
+
+      {/* Clinic photo */}
+      <section className="bg-white pt-10 pb-2">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+              <Image src="/clinic-reception.jpg" alt="Reception area at Glow in Wellness, Caboolture" fill className="object-cover" sizes="(max-width: 640px) 100vw, 50vw" />
+            </div>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+              <Image src="/clinic-treatment-room.jpg" alt="Treatment room at Glow in Wellness, Caboolture" fill className="object-cover" sizes="(max-width: 640px) 100vw, 50vw" />
+            </div>
+          </div>
         </div>
       </section>
 

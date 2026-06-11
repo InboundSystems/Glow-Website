@@ -199,13 +199,13 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-              <Image src="/massage-back.jpg" alt="Gloria performing back massage" fill className="object-cover" sizes="(max-width: 640px) 100vw, 33vw" />
+              <Image src="/clinic-treatment-room.jpg" alt="Treatment room at Glow in Wellness, Caboolture" fill className="object-cover" sizes="(max-width: 640px) 100vw, 33vw" />
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-              <Image src="/massage-deep.jpg" alt="Deep tissue massage treatment" fill className="object-cover" sizes="(max-width: 640px) 100vw, 33vw" />
+              <Image src="/clinic-reception.jpg" alt="Reception area at Glow in Wellness" fill className="object-cover" sizes="(max-width: 640px) 100vw, 33vw" />
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-              <Image src="/massage-face.jpg" alt="Gloria performing facial and neck massage" fill className="object-cover" sizes="(max-width: 640px) 100vw, 33vw" />
+              <Image src="/clinic-logo-sign.jpg" alt="Glow in Wellness clinic sign" fill className="object-cover object-center" sizes="(max-width: 640px) 100vw, 33vw" />
             </div>
           </div>
         </div>

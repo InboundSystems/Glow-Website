@@ -68,6 +68,18 @@ export default function ProductsSection() {
           </h2>
         </FadeIn>
 
+        <FadeIn delay={0.05} className="mb-10">
+          <div className="relative w-full aspect-[16/6] rounded-2xl overflow-hidden">
+            <Image
+              src="/clinic-products-shelf.jpg"
+              alt="Products available at Glow in Wellness clinic"
+              fill
+              className="object-cover object-top"
+              sizes="(max-width: 1280px) 100vw, 1152px"
+            />
+          </div>
+        </FadeIn>
+
         {/* Filter tabs */}
         <FadeIn delay={0.1} className="flex flex-wrap justify-center gap-3 mb-10">
           {tabs.map((tab) => (
