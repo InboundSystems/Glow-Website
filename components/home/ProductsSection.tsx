@@ -12,6 +12,7 @@ const products: {
   price: number;
   inStock: boolean;
   note?: string;
+  image: string;
 }[] = [
   {
     name: "Self Warming Eye Mask",
@@ -19,6 +20,7 @@ const products: {
     price: 5.0,
     inStock: true,
     note: "Available in Unscented, Lavender & Chamomile",
+    image: "/products/steam-eye-mask.png",
   },
   {
     name: "GIW Muscle Balm",
@@ -26,12 +28,14 @@ const products: {
     price: 25.0,
     inStock: true,
     note: "Made in-house — clients love it for pain relief",
+    image: "/products/giw-muscle-balm.png",
   },
   {
     name: "Rocktape Kinesiology Tape",
     category: "Others",
     price: 20.0,
     inStock: true,
+    image: "/products/rocktape.png",
   },
   {
     name: "The Patch Remedy Vitamin Patches",
@@ -39,12 +43,14 @@ const products: {
     price: 30.0,
     inStock: true,
     note: "Limited stock — select packs available",
+    image: "/products/patch-remedy.png",
   },
   {
     name: "Recovery Tools Cupping Set",
     category: "Others",
     price: 50.0,
     inStock: true,
+    image: "/products/recovery-tools-cupping-set.png",
   },
 ];
 
@@ -104,14 +110,13 @@ export default function ProductsSection() {
             <div
               className="rounded-2xl border border-border-brand bg-white overflow-hidden hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 h-full"
             >
-              {/* Image placeholder — TODO: replace with real product photos once provided */}
-              <div className="relative aspect-square bg-gray-100">
+              <div className="relative aspect-square bg-sage-light">
                 <Image
-                  src={`https://placehold.co/300x300/f5f0ff/8800CC?text=${encodeURIComponent(product.name)}`}
+                  src={product.image}
                   alt={product.name}
                   fill
-                  className="object-cover"
-                  unoptimized
+                  className="object-contain p-4"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 {!product.inStock && (
                   <div className="absolute inset-0 flex items-center justify-center bg-black/30">
