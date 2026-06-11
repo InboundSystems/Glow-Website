@@ -113,7 +113,7 @@ export default function BowenTherapyCabooltureePage() {
         What is Bowen Therapy?
       </h2>
       <p className="text-text-muted leading-relaxed mb-4">
-        Bowen Therapy is a gentle, non-invasive bodywork technique developed by Tom Bowen in
+        Bowen Therapy is a non-invasive bodywork technique developed by Tom Bowen in
         Geelong, Australia during the 1950s and 60s. Rather than applying sustained pressure or
         manipulation, Bowen uses a series of precise, rolling-type moves over muscles, tendons, and
         fascia at specific points on the body. These moves are separated by deliberate pauses — a

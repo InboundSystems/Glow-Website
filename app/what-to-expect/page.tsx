@@ -31,7 +31,7 @@ const steps = [
   {
     number: "04",
     title: "Your Treatment",
-    body: "You'll lie on a comfortable treatment table, draped appropriately at all times. Gloria will work through the agreed approach — whether that's targeted remedial work on specific areas, a full-body relaxation massage, or a Bowen therapy session with its characteristic rest pauses. You can give feedback at any time — pressure, temperature, or pace. This is your session.",
+    body: "You'll lie on a comfortable treatment table, draped appropriately at all times. Gloria will work through the agreed approach — whether that's targeted remedial work on specific areas, a comprehensive session that moves through all your areas of concern, or a Bowen therapy session with its characteristic rest pauses. You can give feedback at any time — pressure, temperature, or pace. This is your session.",
     tip: "For Bowen therapy, you'll notice pauses between moves — this is deliberate and important. The body needs time to respond.",
   },
   {
@@ -49,7 +49,7 @@ const faqs = [
   },
   {
     q: "How long is a session?",
-    a: "Sessions are typically 60 minutes, though 90-minute appointments are available. Your first session may run slightly longer due to the initial consultation.",
+    a: "Sessions are typically 70 minutes, though 90-minute appointments are available. Your first session may run slightly longer due to the initial consultation.",
   },
   {
     q: "Will it hurt?",

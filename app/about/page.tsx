@@ -86,10 +86,6 @@ export default function AboutPage() {
                   The idea that I could help people move more freely and live more
                   comfortably is what drives everything I do.
                 </p>
-                <p className="text-text-muted leading-relaxed">
-                  That sense of purpose is what brought me to Caboolture, and
-                  it&apos;s what keeps me here.
-                </p>
               </div>
 
               <div className="flex flex-col gap-4">
@@ -104,7 +100,7 @@ export default function AboutPage() {
                 <p className="text-text-muted leading-relaxed">
                   I combine remedial massage techniques with Bowen therapy
                   where appropriate, which gives me a wider toolkit to draw
-                  from. Bowen in particular is remarkable for its gentle power
+                  from. Bowen in particular is remarkable for its catalytic power
                   — it works with the fascial and nervous system to trigger
                   deep, lasting rebalancing that often surprises clients who
                   are used to more forceful approaches.
@@ -116,7 +112,7 @@ export default function AboutPage() {
                   Bowen Therapy in Caboolture
                 </h2>
                 <p className="text-text-muted leading-relaxed">
-                  Bowen Therapy is a gentle, non-invasive technique developed
+                  Bowen Therapy is a non-invasive technique developed
                   by Tom Bowen in Geelong, Australia. It uses precise,
                   rolling-type moves over muscles, tendons, and fascia to
                   stimulate the body&apos;s self-healing mechanisms. The pauses
@@ -189,7 +185,7 @@ export default function AboutPage() {
                   I recently completed a <strong>TMJ Dysfunction course</strong>, adding
                   specialist skills in treating jaw pain, headaches, and tension related
                   to the temporomandibular joint. If you&apos;ve been struggling with jaw
-                  clenching, clicking, or persistent facial tension, this is something I
+                  clenching, clicking, tinnitus, or persistent facial tension, this is something I
                   can now address directly as part of your treatment.
                 </p>
               </div>
