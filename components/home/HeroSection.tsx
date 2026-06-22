@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -17,12 +18,17 @@ export default function HeroSection() {
   return (
     <section
       className="relative min-h-screen flex items-center justify-center text-center overflow-hidden"
-      style={{
-        backgroundImage: "url('/massage-overhead.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
     >
+      {/* Hero image — fill + priority injects <link rel="preload">, serves WebP/AVIF, and generates responsive srcset */}
+      <Image
+        src="/massage-overhead.jpg"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center"
+      />
+
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-cream/80" />
 

@@ -73,7 +73,7 @@ export default function HomeContact() {
               <div className="flex gap-3">
                 <span className="font-semibold text-plum shrink-0 w-16">Address</span>
                 <span className="text-white/80">
-                  Level 1 R1, 20 King Street, Caboolture Queensland 4510, Australia
+                  Level 1, Shop R1/20 King St, Caboolture QLD 4510
                 </span>
               </div>
               <div className="flex gap-3">

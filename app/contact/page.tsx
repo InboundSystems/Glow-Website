@@ -74,9 +74,9 @@ export default function ContactPage() {
                   Location
                 </h3>
                 <address className="not-italic text-text-dark leading-relaxed">
-                  Level 1 R1, 20 King Street
+                  Level 1, Shop R1/20 King St
                   <br />
-                  Caboolture Queensland 4510, Australia
+                  Caboolture QLD 4510
                 </address>
                 <p className="text-sm text-text-muted">Free parking available on site.</p>
               </div>

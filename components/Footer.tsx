@@ -31,9 +31,9 @@ export default function Footer() {
               0413 502 977
             </a>
             <address className="not-italic text-sm text-white/50 leading-relaxed">
-              Level 1 R1, 20 King Street
+              Level 1, Shop R1/20 King St
               <br />
-              Caboolture Queensland 4510, Australia
+              Caboolture QLD 4510
             </address>
           </div>
 

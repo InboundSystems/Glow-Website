@@ -10,7 +10,7 @@ export const homeFaqs = [
   {
     question: "Where is Glow in Wellness located?",
     answer:
-      "Glow in Wellness is located at Level 1 R1, 20 King Street, Caboolture Queensland 4510. Call me on 0413 502 977 for parking instructions.",
+      "Glow in Wellness is located at Level 1, Shop R1/20 King St, Caboolture QLD 4510. Call me on 0413 502 977 for parking instructions.",
   },
   {
     question: "What is the difference between remedial massage and Bowen therapy?",
