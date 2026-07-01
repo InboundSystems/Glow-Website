@@ -100,7 +100,7 @@ export default function ServicesGrid() {
           </p>
         </FadeIn>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {/* Remedial Massage */}
           <FadeIn delay={0.05}>
             <div className="rounded-2xl border border-border-brand bg-white overflow-hidden flex flex-col h-full hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
@@ -180,6 +180,37 @@ export default function ServicesGrid() {
                 >
                   Learn more
                 </Link>
+              </div>
+            </div>
+          </FadeIn>
+
+          {/* Compression Boot Recovery */}
+          <FadeIn delay={0.35}>
+            <div className="rounded-2xl border border-border-brand bg-white overflow-hidden flex flex-col h-full hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+              <div className="h-1.5 bg-sage rounded-t-2xl" />
+              <div className="p-6 flex flex-col gap-4 flex-1">
+                <h3 className="font-bold text-text-dark text-lg">Compression Boot Recovery</h3>
+                <p className="text-sm text-text-muted leading-relaxed flex-1">
+                  Therabody compression boots with infrared and vibration therapy — designed to flush lactic acid, boost circulation, and speed up muscle recovery. Perfect as a standalone session or added on to your massage.
+                </p>
+                <div className="flex flex-col gap-1.5 text-sm border-t border-border-brand pt-3">
+                  <div className="flex justify-between">
+                    <span className="text-text-muted">15 mins</span>
+                    <span className="font-semibold text-text-dark">$20</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-text-muted">30 mins</span>
+                    <span className="font-semibold text-text-dark">$40</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-text-muted">60 mins</span>
+                    <span className="font-semibold text-text-dark">$60</span>
+                  </div>
+                  <div className="flex justify-between border-t border-border-brand pt-1.5 mt-0.5">
+                    <span className="text-text-muted">Add-on to massage</span>
+                    <span className="font-semibold text-text-dark">$10</span>
+                  </div>
+                </div>
               </div>
             </div>
           </FadeIn>
