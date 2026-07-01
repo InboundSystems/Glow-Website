@@ -87,7 +87,7 @@ export default function Footer() {
 
         <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-white/30">
           <p>Copyright &copy; 2024, GLOW IN WELLNESS MASSAGE THERAPY — All rights reserved</p>
-          <p>ABN: XX XXX XXX XXX</p>
+          <p>ABN: 94 727 980 015</p>
         </div>
       </div>
     </footer>
