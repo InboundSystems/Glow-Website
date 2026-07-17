@@ -2,24 +2,6 @@
 
 import FadeIn from "@/components/ui/FadeIn";
 
-const reviews = [
-  {
-    name: "Sandra Dare",
-    rating: 5,
-    text: "I have been going to Gloria for years now, always walk out feeling better than I walked in. She especially loves working on necks and shoulders (which I need). And she accepts health funds — big bonus!!",
-  },
-  {
-    name: "Caroline Sonter",
-    rating: 5,
-    text: "I have been seeing Gloria for many years now, and I see her frequently to ease my pain! Gloria is an awesome massage therapist, she knows how to create a calming environment, she is able to release the tension and knows the exact spots to massage. I highly recommend Gloria to all my family and friends, and many of them see Gloria on a frequent basis also. Do yourself a favour and book in with Gloria!",
-  },
-  {
-    name: "Laura Sheather",
-    rating: 5,
-    text: "Gloria has been helping with muscle and joint pain for many years now and I cannot recommend her highly enough. We have used remedial massage and Bowen for lower leg and back pain, as well as scar tissue therapy after multiple surgeries. Thank you Glo!",
-  },
-];
-
 function StarRating({ count }: { count: number }) {
   return (
     <div className="flex items-center gap-0.5">
@@ -62,26 +44,26 @@ export default function ReviewsWidget() {
           </div>
         </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {reviews.map((review, i) => (
-            <FadeIn key={review.name} delay={i * 0.12}>
-              <div className="bg-white rounded-2xl p-6 flex flex-col gap-4 border border-border-brand h-full relative overflow-hidden hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
-                {/* Decorative quote mark */}
-                <span className="absolute top-3 right-4 font-serif text-[5rem] leading-none text-plum/8 select-none pointer-events-none">
-                  &ldquo;
-                </span>
-                <StarRating count={review.rating} />
-                <p className="text-sm text-text-muted leading-relaxed flex-1 relative">
-                  &ldquo;{review.text}&rdquo;
-                </p>
-                <div className="flex items-center justify-between pt-2 border-t border-border-brand">
-                  <span className="text-sm font-semibold text-text-dark">{review.name}</span>
-                  <span className="text-xs text-text-muted">Google Review</span>
-                </div>
-              </div>
-            </FadeIn>
-          ))}
-        </div>
+        <FadeIn delay={0.1}>
+          <div className="bg-white rounded-2xl p-8 flex flex-col items-center text-center gap-4 border border-border-brand">
+            <p className="text-text-muted leading-relaxed max-w-md">
+              Client feedback for our massage and Bowen therapy services is
+              hosted exclusively on Google — read what people are saying and
+              leave your own review there.
+            </p>
+            <a
+              href="https://www.google.com/maps/search/Glow+in+Wellness+Caboolture"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-7 py-3 rounded-[50px] bg-plum text-white text-sm font-medium hover:bg-plum-dark transition-colors"
+            >
+              View our Google Reviews
+              <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 8h10M9 4l4 4-4 4" />
+              </svg>
+            </a>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );

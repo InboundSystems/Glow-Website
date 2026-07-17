@@ -9,47 +9,34 @@ type Category = "All" | "Mask" | "Others";
 const products: {
   name: string;
   category: Category;
-  price: number;
-  inStock: boolean;
   note?: string;
   image: string;
 }[] = [
   {
     name: "Self Warming Eye Mask",
     category: "Mask",
-    price: 5.0,
-    inStock: true,
     note: "Available in Unscented, Lavender & Chamomile",
     image: "/products/steam-eye-mask.png",
   },
   {
     name: "GIW Muscle Balm",
     category: "Others",
-    price: 25.0,
-    inStock: true,
-    note: "Made in-house — clients love it for pain relief",
+    note: "Made in-house — a client favourite",
     image: "/products/giw-muscle-balm.png",
   },
   {
     name: "Rocktape Kinesiology Tape",
     category: "Others",
-    price: 20.0,
-    inStock: true,
     image: "/products/rocktape.png",
   },
   {
     name: "The Patch Remedy Vitamin Patches",
     category: "Others",
-    price: 30.0,
-    inStock: true,
-    note: "Limited stock — select packs available",
     image: "/products/patch-remedy.png",
   },
   {
     name: "Recovery Tools Cupping Set",
     category: "Others",
-    price: 50.0,
-    inStock: true,
     image: "/products/recovery-tools-cupping-set.png",
   },
 ];
@@ -68,10 +55,14 @@ export default function ProductsSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <FadeIn className="text-center mb-6">
-          <p className="text-xs font-medium text-plum uppercase tracking-widest mb-3">Take home</p>
+          <p className="text-xs font-medium text-plum uppercase tracking-widest mb-3">In the clinic</p>
           <h2 className="font-script text-[2.5rem] font-semibold text-plum">
-            Products available in clinic
+            Items You&apos;ll Find at the Clinic
           </h2>
+          <p className="text-text-muted max-w-xl mx-auto mt-3 leading-relaxed text-sm">
+            A few extras Gloria keeps on hand in the treatment room. Ask her about these in person
+            during your appointment.
+          </p>
         </FadeIn>
 
         <FadeIn delay={0.05} className="mb-10">
@@ -118,13 +109,6 @@ export default function ProductsSection() {
                   className="object-contain p-4"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
-                {!product.inStock && (
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                    <span className="bg-white text-plum font-bold text-sm px-4 py-1.5 rounded-full">
-                      Out Of Stock
-                    </span>
-                  </div>
-                )}
               </div>
 
               {/* Info */}
@@ -133,9 +117,6 @@ export default function ProductsSection() {
                 {product.note && (
                   <p className="text-xs text-text-muted mt-0.5">{product.note}</p>
                 )}
-                <p className="text-text-muted text-sm mt-1">
-                  Price: ${product.price.toFixed(2)}
-                </p>
               </div>
             </div>
             </FadeIn>

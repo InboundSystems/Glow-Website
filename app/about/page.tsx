@@ -6,7 +6,7 @@ import BreadcrumbSchema from "@/components/schema/BreadcrumbSchema";
 export const metadata: Metadata = {
   title: "About Gloria Mullaly",
   description:
-    "Meet Gloria Mullaly — qualified remedial massage therapist and certified Bowen practitioner based in Caboolture, QLD. Learn about her training, approach, and philosophy.",
+    "Meet Gloria Mullaly — qualified remedial massage therapist, certified Bowen practitioner, and TMJ treatment specialist based in Caboolture, QLD. Learn about her training, approach, and philosophy.",
 };
 
 const qualifications = [
@@ -36,9 +36,10 @@ export default function AboutPage() {
             Meet Gloria Mullaly
           </h1>
           <p className="text-lg text-white/70 max-w-2xl leading-relaxed">
-            Qualified remedial massage therapist and certified Bowen
-            practitioner — helping people in Caboolture and the Moreton Bay
-            region move, feel, and live better.
+            Qualified remedial massage therapist, certified Bowen
+            practitioner, and TMJ treatment specialist — helping people in
+            Caboolture and the Moreton Bay region move, feel, and live
+            better.
           </p>
         </div>
       </section>
@@ -104,6 +105,12 @@ export default function AboutPage() {
                   — it works with the fascial and nervous system to trigger
                   deep, lasting rebalancing that often surprises clients who
                   are used to more forceful approaches.
+                </p>
+                <p className="text-text-muted leading-relaxed">
+                  Alongside remedial massage, Bowen therapy, and TMJ
+                  treatment, I also offer Therabody compression boot
+                  sessions in clinic — a relaxing addition for tired legs,
+                  available on its own or as an add-on to your massage.
                 </p>
               </div>
 

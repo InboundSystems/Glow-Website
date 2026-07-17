@@ -27,6 +27,16 @@ export const homeFaqs = [
     answer:
       "You can book online any time through our booking page, or call Gloria directly during business hours on 0413 502 977. First-time clients are welcome to call with questions before booking.",
   },
+  {
+    question: "What are the compression boots and how do they work?",
+    answer:
+      "They're Therabody compression boots — full-leg sleeves that fit over your legs and cycle through gentle waves of dynamic air compression, combined with infrared heat and vibration. Many clients find the sensation relaxing for tired, heavy legs. Sessions run 15, 30, or 60 minutes, or you can add a quick session on to your massage. It's a relaxation service, not a medical treatment.",
+  },
+  {
+    question: "Are the compression boots suitable for me?",
+    answer:
+      "Yes, for most people — they're a general relaxation and wellness service suited to anyone wanting to unwind tired or heavy legs, whether you're active, on your feet a lot, or just after a bit of downtime. If you have an existing medical condition affecting circulation or your lymphatic health, please check with your doctor first and mention it when you book, as this is a general wellness service rather than a medical treatment.",
+  },
 ];
 
 export default function HomeFaqSection() {

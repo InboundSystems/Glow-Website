@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import FadeIn from "@/components/ui/FadeIn";
+import { compressionBootPricing } from "@/lib/compressionBootPricing";
 
 const accreditations = [
   "Diploma of Remedial Massage, Q Academy, QLD",
@@ -100,7 +101,7 @@ export default function ServicesGrid() {
           </p>
         </FadeIn>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {/* Remedial Massage */}
           <FadeIn delay={0.05}>
             <div className="rounded-2xl border border-border-brand bg-white overflow-hidden flex flex-col h-full hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
@@ -108,7 +109,7 @@ export default function ServicesGrid() {
               <div className="p-6 flex flex-col gap-4 flex-1">
                 <h3 className="font-bold text-text-dark text-lg">Remedial Massage Therapy</h3>
                 <p className="text-sm text-text-muted leading-relaxed flex-1">
-                  Tailored treatments for targeted relief. Assessment-based — every technique chosen for a reason, whether that's deep tissue work, myofascial release, or trigger point therapy.
+                  Tailored treatments for targeted relief. Assessment-based — every technique chosen for a reason, whether that&apos;s deep tissue work, myofascial release, or trigger point therapy.
                 </p>
                 <div className="flex flex-col gap-1.5 text-sm border-t border-border-brand pt-3">
                   <div className="flex justify-between">
@@ -184,37 +185,37 @@ export default function ServicesGrid() {
             </div>
           </FadeIn>
 
-          {/* Compression Boot Recovery */}
-          <FadeIn delay={0.35}>
-            <div className="rounded-2xl border border-border-brand bg-white overflow-hidden flex flex-col h-full hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
-              <div className="h-1.5 bg-sage rounded-t-2xl" />
-              <div className="p-6 flex flex-col gap-4 flex-1">
+        </div>
+
+        {/* Part C — Relaxation add-on, kept visually and structurally separate from clinical services */}
+        <FadeIn delay={0.1} className="mb-16">
+          <div className="rounded-2xl border border-border-brand bg-sage-light overflow-hidden">
+            <div className="p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-6">
+              <div className="flex-1 flex flex-col gap-3">
+                <span className="self-start text-xs font-medium text-plum uppercase tracking-widest bg-white rounded-full px-3 py-1">
+                  Relaxation add-on — not a clinical service
+                </span>
                 <h3 className="font-bold text-text-dark text-lg">Compression Boot Recovery</h3>
-                <p className="text-sm text-text-muted leading-relaxed flex-1">
-                  Therabody compression boots with infrared and vibration therapy — designed to flush lactic acid, boost circulation, and speed up muscle recovery. Perfect as a standalone session or added on to your massage.
+                <p className="text-sm text-text-muted leading-relaxed">
+                  Therabody compression boots with infrared heat and gentle vibration — a relaxing way to unwind tired, heavy legs. Many clients enjoy it as a standalone session or added on to their massage. This is a general wellness and relaxation service, not a medical treatment.
                 </p>
-                <div className="flex flex-col gap-1.5 text-sm border-t border-border-brand pt-3">
-                  <div className="flex justify-between">
-                    <span className="text-text-muted">15 mins</span>
-                    <span className="font-semibold text-text-dark">$20</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-text-muted">30 mins</span>
-                    <span className="font-semibold text-text-dark">$40</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-text-muted">60 mins</span>
-                    <span className="font-semibold text-text-dark">$60</span>
-                  </div>
-                  <div className="flex justify-between border-t border-border-brand pt-1.5 mt-0.5">
-                    <span className="text-text-muted">Add-on to massage</span>
-                    <span className="font-semibold text-text-dark">$10</span>
-                  </div>
+                <div className="flex flex-wrap gap-x-6 gap-y-1 text-sm pt-1">
+                  {compressionBootPricing.map((row) => (
+                    <span key={row.label} className="text-text-muted">
+                      {row.label}: <span className="font-semibold text-text-dark">{row.price}</span>
+                    </span>
+                  ))}
                 </div>
               </div>
+              <Link
+                href="/compression-boot-recovery-caboolture"
+                className="self-start sm:self-center shrink-0 inline-flex items-center justify-center px-6 py-2.5 rounded-[50px] border-2 border-plum text-plum text-sm font-medium hover:bg-plum hover:text-white transition-colors"
+              >
+                Learn more
+              </Link>
             </div>
-          </FadeIn>
-        </div>
+          </div>
+        </FadeIn>
 
         {/* Book CTA */}
         <FadeIn className="flex justify-center">

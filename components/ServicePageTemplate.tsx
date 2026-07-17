@@ -4,6 +4,7 @@ import FaqSchema, { FaqItem } from "@/components/schema/FaqSchema";
 
 type Step = { title: string; description: string };
 type RelatedService = { name: string; href: string };
+type PriceRow = { label: string; price: string };
 
 type ServicePageTemplateProps = {
   breadcrumb: { name: string; href: string };
@@ -13,6 +14,7 @@ type ServicePageTemplateProps = {
   children?: React.ReactNode;
   benefits: string[];
   expectSteps: Step[];
+  pricing?: PriceRow[];
   showHicaps?: boolean;
   faqs: FaqItem[];
   relatedServices: RelatedService[];
@@ -26,6 +28,7 @@ export default function ServicePageTemplate({
   children,
   benefits,
   expectSteps,
+  pricing,
   showHicaps = false,
   faqs,
   relatedServices,
@@ -109,6 +112,28 @@ export default function ServicePageTemplate({
           </div>
         </div>
       </section>
+
+      {/* Pricing — light purple tint */}
+      {pricing && (
+        <section className="bg-sage-light py-16">
+          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-text-dark mb-8 text-center">
+              Pricing
+            </h2>
+            <div className="rounded-2xl border border-border-brand bg-white p-6 flex flex-col gap-3">
+              {pricing.map((row) => (
+                <div
+                  key={row.label}
+                  className="flex justify-between text-sm border-b border-border-brand last:border-0 pb-3 last:pb-0"
+                >
+                  <span className="text-text-muted">{row.label}</span>
+                  <span className="font-semibold text-text-dark">{row.price}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* HICAPS callout — plum */}
       {showHicaps && (
