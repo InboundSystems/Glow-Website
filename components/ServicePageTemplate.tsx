@@ -1,16 +1,19 @@
 import Link from "next/link";
+import Image from "next/image";
 import BreadcrumbSchema from "@/components/schema/BreadcrumbSchema";
 import FaqSchema, { FaqItem } from "@/components/schema/FaqSchema";
 
 type Step = { title: string; description: string };
 type RelatedService = { name: string; href: string };
 type PriceRow = { label: string; price: string };
+type HeroImage = { src: string; alt: string };
 
 type ServicePageTemplateProps = {
   breadcrumb: { name: string; href: string };
   badge?: string;
   heading: string;
   intro: string;
+  heroImage?: HeroImage;
   children?: React.ReactNode;
   benefits: string[];
   expectSteps: Step[];
@@ -25,6 +28,7 @@ export default function ServicePageTemplate({
   badge = "Caboolture, QLD",
   heading,
   intro,
+  heroImage,
   children,
   benefits,
   expectSteps,
@@ -41,21 +45,39 @@ export default function ServicePageTemplate({
       {/* Hero — dark */}
       <section className="bg-cream pt-16 pb-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-medium text-white/50 uppercase tracking-widest mb-3">
-            {badge}
-          </p>
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white mb-4">
-            {heading}
-          </h1>
-          <p className="text-lg text-white/70 max-w-2xl leading-relaxed mb-8">
-            {intro}
-          </p>
-          <Link
-            href="/book"
-            className="inline-flex items-center justify-center px-7 py-3 rounded-[50px] bg-plum text-white font-medium text-sm hover:bg-plum-dark transition-colors"
-          >
-            Book Your Appointment
-          </Link>
+          <div className={heroImage ? "grid grid-cols-1 lg:grid-cols-5 gap-10 items-center" : ""}>
+            <div className={heroImage ? "lg:col-span-3" : ""}>
+              <p className="text-sm font-medium text-white/50 uppercase tracking-widest mb-3">
+                {badge}
+              </p>
+              <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white mb-4">
+                {heading}
+              </h1>
+              <p className="text-lg text-white/70 max-w-2xl leading-relaxed mb-8">
+                {intro}
+              </p>
+              <Link
+                href="/book"
+                className="inline-flex items-center justify-center px-7 py-3 rounded-[50px] bg-plum text-white font-medium text-sm hover:bg-plum-dark transition-colors"
+              >
+                Book Your Appointment
+              </Link>
+            </div>
+            {heroImage && (
+              <div className="lg:col-span-2">
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                  <Image
+                    src={heroImage.src}
+                    alt={heroImage.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    priority
+                  />
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </section>
 

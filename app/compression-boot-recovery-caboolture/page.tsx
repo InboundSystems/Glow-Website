@@ -1,6 +1,26 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
 import { compressionBootPricing } from "@/lib/compressionBootPricing";
+
+const gallery = [
+  {
+    src: "/compression-boots-pair-tabletop.jpg",
+    alt: "Pair of JetBoots Pro Plus compression boots laid out on the treatment table, one open showing the inner lining",
+  },
+  {
+    src: "/compression-boots-interior-panels.jpg",
+    alt: "Close-up of the unzipped JetBoots Pro Plus compression boots showing the internal air-chamber panels",
+  },
+  {
+    src: "/compression-boots-cuff-closeup.jpg",
+    alt: "Close-up of the JetBoots Pro Plus boot cuffs and logo",
+  },
+  {
+    src: "/compression-boots-controller-display.jpg",
+    alt: "Handheld JetBoots Pro Plus controller showing battery level and mode icons on its display",
+  },
+];
 
 export const metadata: Metadata = {
   title: "Compression Boot Recovery Caboolture",
@@ -97,6 +117,10 @@ export default function CompressionBootRecoveryCabooltureePage() {
       }}
       heading="Compression Boot Recovery Caboolture"
       intro="Therabody compression boots combine dynamic air compression, infrared heat, and vibration for a relaxing, recovery-style session — a popular way to unwind tired, heavy legs, whether on their own or added on to your massage. This is a relaxation service, not a medical treatment."
+      heroImage={{
+        src: "/compression-boots-product-detail.jpg",
+        alt: "Close-up of the JetBoots Pro Plus compression boot cuffs and branding",
+      }}
       benefits={benefits}
       expectSteps={expectSteps}
       pricing={compressionBootPricing}
@@ -155,11 +179,22 @@ export default function CompressionBootRecoveryCabooltureePage() {
         </p>
       </div>
 
-      {/*
-        Photo/video gallery placeholder — Gloria is supplying her own unpacking/try-on
-        photos and video of the compression boots to add here. Drop a gallery
-        component or image grid in this spot once media is provided.
-      */}
+      <h2 className="font-serif text-2xl font-bold text-text-dark mb-4 mt-10">
+        Take a Closer Look
+      </h2>
+      <div className="grid grid-cols-2 gap-4">
+        {gallery.map((image) => (
+          <div key={image.src} className="relative aspect-square rounded-2xl overflow-hidden">
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              className="object-cover"
+              sizes="(max-width: 640px) 50vw, 25vw"
+            />
+          </div>
+        ))}
+      </div>
     </ServicePageTemplate>
   );
 }

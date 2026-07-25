@@ -85,6 +85,10 @@ export default function TmjTreatmentCabooltureePage() {
       breadcrumb={{ name: "TMJ Remedial Treatment Caboolture", href: "/tmj-treatment-caboolture" }}
       heading="TMJ Remedial Treatment Caboolture"
       intro="A whole-body approach to treating jaw joint dysfunction — addressing the fascial connections between your hips and jaw to relieve pain, tension, and restricted movement."
+      heroImage={{
+        src: "/massage-face.jpg",
+        alt: "Therapist performing gentle facial and neck massage as part of TMJ treatment",
+      }}
       benefits={benefits}
       expectSteps={expectSteps}
       showHicaps

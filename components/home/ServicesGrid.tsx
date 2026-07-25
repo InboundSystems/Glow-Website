@@ -191,6 +191,15 @@ export default function ServicesGrid() {
         <FadeIn delay={0.1} className="mb-16">
           <div className="rounded-2xl border border-border-brand bg-sage-light overflow-hidden">
             <div className="p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-6">
+              <div className="relative w-full sm:w-32 aspect-[4/3] sm:aspect-square rounded-xl overflow-hidden shrink-0">
+                <Image
+                  src="/compression-boots-cuff-closeup.jpg"
+                  alt="JetBoots Pro Plus compression boots used for recovery sessions at Glow in Wellness"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, 128px"
+                />
+              </div>
               <div className="flex-1 flex flex-col gap-3">
                 <span className="self-start text-xs font-medium text-plum uppercase tracking-widest bg-white rounded-full px-3 py-1">
                   Relaxation add-on — not a clinical service

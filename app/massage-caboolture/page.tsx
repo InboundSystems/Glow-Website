@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import BreadcrumbSchema from "@/components/schema/BreadcrumbSchema";
 
 export const metadata: Metadata = {
@@ -47,30 +48,46 @@ export default function MassageCabooltureePage() {
       {/* Hero — dark */}
       <section className="bg-cream pt-16 pb-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-medium text-white/50 uppercase tracking-widest mb-3">
-            Caboolture, Queensland
-          </p>
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white mb-4">
-            Massage Caboolture
-          </h1>
-          <p className="text-lg text-white/70 max-w-2xl leading-relaxed mb-8">
-            Glow in Wellness offers a full range of massage and bodywork therapies in Caboolture,
-            QLD. Whether you need targeted pain relief, gentle healing, or post-surgical recovery
-            support — Gloria Mullaly has a treatment designed for you.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/book"
-              className="inline-flex items-center justify-center px-7 py-3 rounded-[50px] bg-plum text-white font-medium text-sm hover:bg-plum-dark transition-colors"
-            >
-              Book Your Appointment
-            </Link>
-            <Link
-              href="/about"
-              className="inline-flex items-center justify-center px-7 py-3 rounded-[50px] border-2 border-white/30 text-white font-medium text-sm hover:border-white transition-colors"
-            >
-              About Gloria
-            </Link>
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
+            <div className="lg:col-span-3">
+              <p className="text-sm font-medium text-white/50 uppercase tracking-widest mb-3">
+                Caboolture, Queensland
+              </p>
+              <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white mb-4">
+                Massage Caboolture
+              </h1>
+              <p className="text-lg text-white/70 max-w-2xl leading-relaxed mb-8">
+                Glow in Wellness offers a full range of massage and bodywork therapies in Caboolture,
+                QLD. Whether you need targeted pain relief, gentle healing, or post-surgical recovery
+                support — Gloria Mullaly has a treatment designed for you.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/book"
+                  className="inline-flex items-center justify-center px-7 py-3 rounded-[50px] bg-plum text-white font-medium text-sm hover:bg-plum-dark transition-colors"
+                >
+                  Book Your Appointment
+                </Link>
+                <Link
+                  href="/about"
+                  className="inline-flex items-center justify-center px-7 py-3 rounded-[50px] border-2 border-white/30 text-white font-medium text-sm hover:border-white transition-colors"
+                >
+                  About Gloria
+                </Link>
+              </div>
+            </div>
+            <div className="lg:col-span-2">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                <Image
+                  src="/massage-close.jpg"
+                  alt="Close-up of a remedial massage therapist's hands working on a client's shoulder"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  priority
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>

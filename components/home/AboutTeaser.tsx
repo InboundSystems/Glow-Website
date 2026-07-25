@@ -70,7 +70,7 @@ export default function AboutTeaser() {
           <FadeIn direction="right" className="order-1 lg:order-2 relative min-h-[400px] lg:min-h-0">
             <div className="absolute inset-0 rounded-2xl overflow-hidden ring-4 ring-plum/10">
               <Image
-                src="/gloria.jpg"
+                src="/gloria-headshot-blue-bg.jpg"
                 alt="Gloria Mullaly — remedial massage therapist and Bowen practitioner, Caboolture"
                 fill
                 className="object-cover object-top"

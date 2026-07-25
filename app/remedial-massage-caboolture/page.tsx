@@ -106,6 +106,10 @@ export default function RemedialMassageCabooltureePage() {
       }}
       heading="Remedial Massage Caboolture"
       intro="Assessment-based remedial massage in Caboolture — going beyond relaxation to identify and treat the root cause of your pain, tension, and restricted movement. HICAPS health fund rebates available on the spot."
+      heroImage={{
+        src: "/massage-back.jpg",
+        alt: "Massage therapist performing deep tissue remedial massage on a client's upper back",
+      }}
       benefits={benefits}
       expectSteps={expectSteps}
       showHicaps

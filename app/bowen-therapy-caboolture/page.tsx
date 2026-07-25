@@ -104,6 +104,10 @@ export default function BowenTherapyCabooltureePage() {
       breadcrumb={{ name: "Bowen Therapy Caboolture", href: "/bowen-therapy-caboolture" }}
       heading="Bowen Therapy Caboolture"
       intro="Gloria Mullaly is one of very few certified Bowen Therapy practitioners in Caboolture and the wider Moreton Bay region. If you've been searching for Bowen therapy near you, you've found it."
+      heroImage={{
+        src: "/massage-deep.jpg",
+        alt: "Hands-on bodywork treatment in progress at Glow in Wellness, Caboolture",
+      }}
       benefits={benefits}
       expectSteps={expectSteps}
       faqs={faqs}
