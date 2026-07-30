@@ -30,7 +30,7 @@ export const homeFaqs = [
   {
     question: "What are the compression boots and how do they work?",
     answer:
-      "They're Therabody compression boots — full-leg sleeves that fit over your legs and cycle through gentle waves of dynamic air compression, combined with infrared heat and vibration. Many clients find the sensation relaxing for tired, heavy legs. Sessions run 15, 30, or 60 minutes, or you can add a quick session on to your massage. It's a relaxation service, not a medical treatment.",
+      "They're Therabody compression boots — full-leg sleeves that fit over your legs and cycle through gentle waves of dynamic air compression, combined with infrared heat and vibration. Many clients find the sensation relaxing for tired, heavy legs. Sessions run 20 or 45 minutes, with 4-session packages available at a discount, or you can add a quick session on to your massage. It's a relaxation service, not a medical treatment.",
   },
   {
     question: "Are the compression boots suitable for me?",

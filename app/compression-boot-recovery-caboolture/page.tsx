@@ -71,7 +71,7 @@ const expectSteps = [
   {
     title: "Relax and recover",
     description:
-      "Sit back and relax for the length of your session — 15, 30, or 60 minutes as a standalone treatment, or as a quick add-on during your massage.",
+      "Sit back and relax for the length of your session — 20 or 45 minutes as a standalone treatment, or as a quick add-on during your massage.",
   },
 ];
 
@@ -84,7 +84,7 @@ const faqs = [
   {
     question: "How long does a compression boot session take?",
     answer:
-      "Sessions run for 15, 30, or 60 minutes depending on what you're after. You can also add a compression boot session on to any massage appointment for a shorter, focused top-up.",
+      "Sessions run for 20 or 45 minutes depending on what you're after, with 4-session packages available at a discount. You can also add a compression boot session on to any massage appointment for a shorter, focused top-up.",
   },
   {
     question: "Can I add compression boots on to my massage?",
