@@ -16,10 +16,10 @@ export const metadata: Metadata = {
 
 const benefits = [
   "Be among the first in Caboolture to try Pulsetherapy before it officially launches",
+  "A fully-clothed, reclined treatment — pulses timed to your own heartbeat, from ankles to abdomen",
   "Exclusive pop-up pricing — over 20% off the introductory rate",
   "A full consultation included so your session is tailored to you",
   "Face treatment available on the day at its lowest-ever price, ahead of its official launch next year",
-  "Book the body and face treatment together and save $20",
   "A discount off future packages for everyone who books and attends",
 ];
 
@@ -50,7 +50,7 @@ const faqs = [
   {
     question: "What is Pulsetherapy?",
     answer:
-      "Pulsetherapy is a new treatment being introduced at Glow in Wellness. This pop-up event is your first chance to experience it, with a consultation included so it can be explained and tailored to you on the day.",
+      "Pulsetherapy is delivered through a set of leg and abdomen sleeves connected to a console, which work through a pulsed mechanical stimulation timed to your own heartbeat. This pop-up event is your first chance to experience it, with a consultation included so it can be explained and tailored to you on the day.",
   },
   {
     question: "Do I need to book in advance?",
@@ -125,10 +125,10 @@ export default function PulsetherapyPopUpCabooltureePage() {
         About Pulsetherapy
       </h2>
       <p className="text-text-muted leading-relaxed mb-4">
-        Pulsetherapy is a new treatment coming to Glow in Wellness. At this exclusive pop-up
-        event you&apos;ll get a full consultation and a hands-on introduction to the treatment —
-        plus the chance to ask every question you have — before it becomes a regular part of
-        Gloria&apos;s service menu.
+        Pulsetherapy is delivered through a set of leg and abdomen sleeves connected to a
+        console. Once fitted, the sleeves work through a pulsed mechanical stimulation timed to
+        your own heartbeat, moving from the ankles up towards the abdomen. You&apos;ll stay
+        fully clothed and reclined for the whole session.
       </p>
       <p className="text-text-muted leading-relaxed mb-4">
         A face treatment option is also available on the day, ahead of its official launch at
@@ -137,15 +137,24 @@ export default function PulsetherapyPopUpCabooltureePage() {
       </p>
 
       {/*
-        TODO (Blake): Gloria's brief asked to "focus on how it works and what it does," but her
-        emails didn't include the actual product details — only 2 email attachments she referred
-        to, which weren't provided to me in this conversation. Replace the two paragraphs above
-        with Gloria's own explanation of the mechanism/benefits once she reviews and approves
-        copy — don't add specific therapeutic/mechanism claims without her sign-off, this site
-        just had a full TGA advertising-compliance pass (see commit 8c85894).
+        Mechanism copy above is sourced from the supplier's own spec sheet
+        (STENDO-Pulsetherapy.pdf, found 1 Sept 2026) — deliberately limited to what the
+        device physically does (pulsed, cardio-synchronised sleeves, ankles to abdomen).
 
-        TODO (Blake): Swap in a hero image + gallery once Gloria/the supplier provide photos —
-        pattern matches the gallery block on the Compression Boot Recovery page.
+        NOT included: the supplier's separate marketing flyer ("Affiche n°6.pdf") claims it
+        "stimulates the immune system," "detoxifies," "accelerates healing," "relieves pain,"
+        "regulates inflammation," and treats "chronic pain" / "digestive disorders". These are
+        exactly the class of therapeutic claim this site's TGA compliance pass (commit 8c85894)
+        stripped from the compression boots page — do not add them here without a proper
+        compliance check, even if Gloria asks for them directly. Flag it back to her instead.
+
+        Also worth raising with Gloria: "Pulsetherapy" is STENDO's own registered trademark
+        (see "Pulsetherapy®" in the flyer), not a neutral rename — if the naming restriction is
+        about a supplier agreement or device labelling, this may not actually satisfy it.
+
+        TODO (Blake): Swap in a hero image + gallery once non-branded photos are available —
+        the supplier PDFs show visible STENDO branding on the console, so those images can't be
+        used directly. Pattern matches the gallery block on the Compression Boot Recovery page.
 
         Also intentionally NOT hardcoding "6 spots left" from Gloria's email — that's a
         snapshot that goes stale fast and risks becoming a false scarcity claim. If she wants a
