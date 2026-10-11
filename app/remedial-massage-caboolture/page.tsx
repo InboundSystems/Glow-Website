@@ -83,7 +83,7 @@ const faqs = [
   {
     question: "What should I expect at my first session?",
     answer:
-      "Your first session includes a thorough intake consultation covering your health history, current concerns, and goals. Gloria will assess your posture and movement before the hands-on treatment begins. The first session is often slightly shorter on treatment time because of the assessment, so it's worth booking 60 or 90 minutes to ensure you get adequate treatment time.",
+      "Your first session includes a thorough intake consultation covering your health history, current concerns, and goals. Gloria will assess your posture and movement before the hands-on treatment begins. The first session is often slightly shorter on treatment time because of the assessment, so it's worth booking the 70-minute session to ensure you get adequate treatment time.",
   },
   {
     question: "What conditions does remedial massage treat?",

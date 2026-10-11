@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import FadeIn from "@/components/ui/FadeIn";
 import { compressionBootPricing } from "@/lib/compressionBootPricing";
+import { remedialMassagePricing, bowenPricing } from "@/lib/massagePricing";
+import { rhythmicCompressionPricing } from "@/lib/rhythmicCompressionPricing";
 
 const accreditations = [
   "Diploma of Remedial Massage, Q Academy, QLD",
@@ -31,6 +33,30 @@ const featureBoxes = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
       </svg>
     ),
+  },
+];
+
+const wellnessServices = [
+  {
+    title: "Compression Boot Recovery",
+    href: "/compression-boot-recovery-caboolture",
+    image: {
+      src: "/compression-boots-cuff-closeup.jpg",
+      alt: "Compression boots used for recovery sessions at Glow in Wellness",
+    },
+    body:
+      "Compression boots with infrared heat and gentle vibration — a relaxing way to unwind tired, heavy legs. May help with that heavy, tired feeling after a long day on your feet. Available on its own or added on to your massage.",
+    pricing: compressionBootPricing,
+  },
+  {
+    // No photography for this service yet — Gloria is shooting some once the new
+    // clinic is set up. Add an `image` here when it lands.
+    title: "Rhythmic Compression Therapy",
+    href: "/rhythmic-compression-therapy-caboolture",
+    image: null,
+    body:
+      "A fully-clothed, reclined session using compression sleeves that pulse in time with your own heartbeat, from the ankles up towards the abdomen. Every appointment includes a consultation so it can be tailored to you.",
+    pricing: rhythmicCompressionPricing,
   },
 ];
 
@@ -112,18 +138,12 @@ export default function ServicesGrid() {
                   Tailored treatments for targeted relief. Assessment-based — every technique chosen for a reason, whether that&apos;s deep tissue work, myofascial release, or trigger point therapy.
                 </p>
                 <div className="flex flex-col gap-1.5 text-sm border-t border-border-brand pt-3">
-                  <div className="flex justify-between">
-                    <span className="text-text-muted">45 mins</span>
-                    <span className="font-semibold text-text-dark">$90</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-text-muted">70 mins</span>
-                    <span className="font-semibold text-text-dark">$130</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-text-muted">90 mins</span>
-                    <span className="font-semibold text-text-dark">$170</span>
-                  </div>
+                  {remedialMassagePricing.map((row) => (
+                    <div key={row.label} className="flex justify-between">
+                      <span className="text-text-muted">{row.label}</span>
+                      <span className="font-semibold text-text-dark">{row.price}</span>
+                    </div>
+                  ))}
                 </div>
                 <Link
                   href="/remedial-massage-caboolture"
@@ -145,10 +165,12 @@ export default function ServicesGrid() {
                   Gentle, precise movements that restore balance to the nervous system and promote the body&apos;s own healing response. Effective for pain, stress, and a wide range of conditions.
                 </p>
                 <div className="flex flex-col gap-1.5 text-sm border-t border-border-brand pt-3">
-                  <div className="flex justify-between">
-                    <span className="text-text-muted">45–60 mins</span>
-                    <span className="font-semibold text-text-dark">$110</span>
-                  </div>
+                  {bowenPricing.map((row) => (
+                    <div key={row.label} className="flex justify-between">
+                      <span className="text-text-muted">{row.label}</span>
+                      <span className="font-semibold text-text-dark">{row.price}</span>
+                    </div>
+                  ))}
                 </div>
                 <Link
                   href="/bowen-therapy-caboolture"
@@ -187,42 +209,80 @@ export default function ServicesGrid() {
 
         </div>
 
-        {/* Part C — Relaxation add-on, kept visually and structurally separate from clinical services */}
+        {/* Part C — Wellness Services. Relaxation services, kept visually and
+            structurally separate from the clinical services above. Gloria has asked for
+            these two to share a single "Wellness Services" page; this is the homepage
+            grouping ahead of that merge. */}
         <FadeIn delay={0.1} className="mb-16">
-          <div className="rounded-2xl border border-border-brand bg-sage-light overflow-hidden">
-            <div className="p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-6">
-              <div className="relative w-full sm:w-32 aspect-[4/3] sm:aspect-square rounded-xl overflow-hidden shrink-0">
-                <Image
-                  src="/compression-boots-cuff-closeup.jpg"
-                  alt="JetBoots Pro Plus compression boots used for recovery sessions at Glow in Wellness"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 100vw, 128px"
-                />
-              </div>
-              <div className="flex-1 flex flex-col gap-3">
-                <span className="self-start text-xs font-medium text-plum uppercase tracking-widest bg-white rounded-full px-3 py-1">
-                  Relaxation add-on — not a clinical service
-                </span>
-                <h3 className="font-bold text-text-dark text-lg">Compression Boot Recovery</h3>
-                <p className="text-sm text-text-muted leading-relaxed">
-                  Therabody compression boots with infrared heat and gentle vibration — a relaxing way to unwind tired, heavy legs. Many clients enjoy it as a standalone session or added on to their massage. This is a general wellness and relaxation service, not a medical treatment.
-                </p>
-                <div className="flex flex-wrap gap-x-6 gap-y-1 text-sm pt-1">
-                  {compressionBootPricing.map((row) => (
-                    <span key={row.label} className="text-text-muted">
-                      {row.label}: <span className="font-semibold text-text-dark">{row.price}</span>
-                    </span>
-                  ))}
+          <div className="text-center mb-8">
+            <h3 className="font-script text-[2rem] font-semibold text-plum mb-2">
+              Wellness Services
+            </h3>
+            <p className="text-sm text-text-muted max-w-xl mx-auto leading-relaxed">
+              Relaxation and wellness services, available on their own or added on to your
+              massage. These are not clinical treatments.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {wellnessServices.map((service) => (
+              <div
+                key={service.href}
+                className="rounded-2xl border border-border-brand bg-sage-light overflow-hidden flex flex-col h-full"
+              >
+                {service.image ? (
+                  <div className="relative w-full aspect-[16/9]">
+                    <Image
+                      src={service.image.src}
+                      alt={service.image.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 100vw, 50vw"
+                    />
+                  </div>
+                ) : (
+                  // Decorative stand-in so cards stay the same height until real
+                  // photography exists. Deliberately not a stock or clinic photo —
+                  // it must not read as a picture of the service itself.
+                  <div
+                    aria-hidden="true"
+                    className="w-full aspect-[16/9] bg-white/60 border-b border-border-brand flex items-center justify-center"
+                  >
+                    <svg
+                      className="w-10 h-10 text-plum/30"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={1.5}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M3 12h3.5l2-5 3 10 2.5-5H21"
+                      />
+                    </svg>
+                  </div>
+                )}
+                <div className="p-6 flex flex-col gap-3 flex-1">
+                  <h4 className="font-bold text-text-dark text-lg">{service.title}</h4>
+                  <p className="text-sm text-text-muted leading-relaxed flex-1">{service.body}</p>
+                  <div className="flex flex-col gap-1.5 text-sm border-t border-border-brand pt-3">
+                    {service.pricing.map((row) => (
+                      <div key={row.label} className="flex justify-between gap-4">
+                        <span className="text-text-muted">{row.label}</span>
+                        <span className="font-semibold text-text-dark shrink-0">{row.price}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <Link
+                    href={service.href}
+                    className="self-start inline-flex items-center justify-center px-6 py-2.5 rounded-[50px] border-2 border-plum text-plum text-sm font-medium hover:bg-plum hover:text-white transition-colors"
+                  >
+                    Learn more
+                  </Link>
                 </div>
               </div>
-              <Link
-                href="/compression-boot-recovery-caboolture"
-                className="self-start sm:self-center shrink-0 inline-flex items-center justify-center px-6 py-2.5 rounded-[50px] border-2 border-plum text-plum text-sm font-medium hover:bg-plum hover:text-white transition-colors"
-              >
-                Learn more
-              </Link>
-            </div>
+            ))}
           </div>
         </FadeIn>
 

@@ -1,5 +1,4 @@
 import HeroSection from "@/components/home/HeroSection";
-import PulsetherapyPopupBanner from "@/components/home/PulsetherapyPopupBanner";
 import ServicesGrid from "@/components/home/ServicesGrid";
 import ProductsSection from "@/components/home/ProductsSection";
 import ReviewsWidget from "@/components/ReviewsWidget";
@@ -12,7 +11,6 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <PulsetherapyPopupBanner />
       <ServicesGrid />
       <ProductsSection />
       <ReviewsWidget />

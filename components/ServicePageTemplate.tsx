@@ -16,6 +16,11 @@ type ServicePageTemplateProps = {
   heroImage?: HeroImage;
   children?: React.ReactNode;
   benefits: string[];
+  // Required by Gloria for any service where benefits are listed: as a Remedial
+  // Massage Therapist she must pair benefit claims with a "check with your
+  // doctor" disclaimer. Rendered directly under the benefits list so the two
+  // can't be separated.
+  benefitsDisclaimer?: string;
   expectSteps: Step[];
   pricing?: PriceRow[];
   showHicaps?: boolean;
@@ -31,6 +36,7 @@ export default function ServicePageTemplate({
   heroImage,
   children,
   benefits,
+  benefitsDisclaimer,
   expectSteps,
   pricing,
   showHicaps = false,
@@ -110,6 +116,24 @@ export default function ServicePageTemplate({
               </li>
             ))}
           </ul>
+          {benefitsDisclaimer && (
+            <div className="flex items-start gap-2.5 mt-8 rounded-xl border border-border-brand bg-white px-4 py-3">
+              <svg
+                className="w-4 h-4 text-plum shrink-0 mt-0.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <p className="text-text-muted text-sm leading-relaxed">{benefitsDisclaimer}</p>
+            </div>
+          )}
         </div>
       </section>
 

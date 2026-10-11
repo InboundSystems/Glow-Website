@@ -50,7 +50,7 @@ const faqs = [
   },
   {
     q: "How long is a session?",
-    a: "Sessions are typically 70 minutes, though 90-minute appointments are available. Your first session may run slightly longer due to the initial consultation.",
+    a: "Massage sessions run for 45 or 70 minutes, and Bowen therapy runs for 45 to 60 minutes. Your first session may run slightly longer due to the initial consultation.",
   },
   {
     q: "Will it hurt?",

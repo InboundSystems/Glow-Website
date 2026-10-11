@@ -6,31 +6,30 @@ import { compressionBootPricing } from "@/lib/compressionBootPricing";
 const gallery = [
   {
     src: "/compression-boots-pair-tabletop.jpg",
-    alt: "Pair of JetBoots Pro Plus compression boots laid out on the treatment table, one open showing the inner lining",
+    alt: "Pair of compression boots laid out on the treatment table, one open showing the inner lining",
   },
   {
     src: "/compression-boots-interior-panels.jpg",
-    alt: "Close-up of the unzipped JetBoots Pro Plus compression boots showing the internal air-chamber panels",
+    alt: "Close-up of the unzipped compression boots showing the internal air-chamber panels",
   },
   {
     src: "/compression-boots-cuff-closeup.jpg",
-    alt: "Close-up of the JetBoots Pro Plus boot cuffs and logo",
+    alt: "Close-up of the compression boot cuffs",
   },
   {
     src: "/compression-boots-controller-display.jpg",
-    alt: "Handheld JetBoots Pro Plus controller showing battery level and mode icons on its display",
+    alt: "Handheld compression boot controller showing battery level and mode icons on its display",
   },
 ];
 
 export const metadata: Metadata = {
   title: "Compression Boot Recovery Caboolture",
   description:
-    "Relax with a Therabody compression boot session in Caboolture with Gloria Mullaly at Glow in Wellness. Dynamic air compression, infrared heat, and gentle vibration for tired, heavy legs — a relaxation service, not a medical treatment. Book online today.",
+    "Relax with a compression boot session in Caboolture with Gloria Mullaly at Glow in Wellness. Dynamic air compression, infrared heat, and gentle vibration for tired, heavy legs — a relaxation service, not a medical treatment. Book online today.",
   keywords: [
     "compression boots Caboolture",
     "compression boot relaxation Caboolture",
     "leg relaxation Caboolture",
-    "Therabody boots Caboolture",
     "recovery lounge Caboolture",
   ],
 };
@@ -43,14 +42,27 @@ const useCases = [
   "Anyone wanting a relaxing add-on to their massage session",
 ];
 
+// Phrased the way Gloria is required to phrase benefits as a Remedial Massage
+// Therapist: "may help with" / "has been known to improve".
+//
+// The hedge does NOT make a therapeutic claim permissible. These are deliberately
+// limited to comfort and relaxation outcomes. Do not add the supplier's claims
+// (circulation, lymphatic drainage, inflammation, recovery time, pain relief)
+// even in hedged form — commit 8c85894 stripped exactly that class of claim from
+// this page for TGA compliance. Flag it back to Gloria instead.
 const benefits = [
-  "A relaxing way to unwind after exercise or a long day on your feet",
+  "May help with that heavy, tired feeling in the legs after a long day on your feet",
+  "Has been known to improve how relaxed and comfortable the legs feel after exercise",
   "Gentle warmth and rhythmic compression that many clients find soothing",
   "Popular with athletes and active clients as a recovery-style add-on",
-  "Some clients report their legs feel lighter afterward — individual experience varies",
-  "A relaxing, low-effort way to unwind",
+  "A low-effort session — you simply sit back while the boots do the work",
   "Available as a standalone session or added on to any massage",
 ];
+
+// Gloria's required wording: a check-with-your-doctor disclaimer has to sit with
+// any list of benefits, not just in the FAQ further down the page.
+const benefitsDisclaimer =
+  "Individual experience varies. If you are not in generally good health, or you have a medical condition affecting your circulation or swelling, please check with your doctor before your session — and mention it when you book so it can be tailored appropriately. This is a relaxation and wellness service, not a medical treatment.";
 
 const expectSteps = [
   {
@@ -61,7 +73,7 @@ const expectSteps = [
   {
     title: "Boots fitted",
     description:
-      "The Therabody compression boots are fitted snugly over your legs, from feet to thighs, over light clothing.",
+      "The compression boots are fitted snugly over your legs, from feet to thighs, over light clothing.",
   },
   {
     title: "Compression, heat and vibration cycle",
@@ -77,7 +89,7 @@ const expectSteps = [
 
 const faqs = [
   {
-    question: "What are the Therabody compression boots?",
+    question: "What are the compression boots?",
     answer:
       "They're a relaxation device that fits over your legs and uses dynamic air compression, combined with infrared heat and vibration. Many people find the sensation relaxing, and they're a popular add-on for athletes and active people as part of a general wellness routine — they're not a medical treatment device.",
   },
@@ -99,7 +111,7 @@ const faqs = [
   {
     question: "Is this suitable for me?",
     answer:
-      "Compression boot sessions are a general relaxation and wellness service suitable for most people looking to unwind tired or heavy legs — it isn't a medical treatment. If you have a specific medical condition affecting your circulation or swelling, please check with your doctor before booking, or mention it when you book so the session can be tailored appropriately.",
+      "Compression boot sessions are a general relaxation and wellness service suitable for most people looking to unwind tired or heavy legs — it isn't a medical treatment. If you are not in generally good health, or you have a medical condition affecting your circulation or swelling, please check with your doctor before booking, or mention it when you book so the session can be tailored appropriately.",
   },
 ];
 
@@ -116,12 +128,13 @@ export default function CompressionBootRecoveryCabooltureePage() {
         href: "/compression-boot-recovery-caboolture",
       }}
       heading="Compression Boot Recovery Caboolture"
-      intro="Therabody compression boots combine dynamic air compression, infrared heat, and vibration for a relaxing, recovery-style session — a popular way to unwind tired, heavy legs, whether on their own or added on to your massage. This is a relaxation service, not a medical treatment."
+      intro="The compression boots combine dynamic air compression, infrared heat, and vibration for a relaxing, recovery-style session — a popular way to unwind tired, heavy legs, whether on their own or added on to your massage. This is a relaxation service, not a medical treatment."
       heroImage={{
         src: "/compression-boots-product-detail.jpg",
-        alt: "Close-up of the JetBoots Pro Plus compression boot cuffs and branding",
+        alt: "Close-up of the compression boot cuffs",
       }}
       benefits={benefits}
+      benefitsDisclaimer={benefitsDisclaimer}
       expectSteps={expectSteps}
       pricing={compressionBootPricing}
       faqs={faqs}
@@ -131,7 +144,7 @@ export default function CompressionBootRecoveryCabooltureePage() {
         What Are Compression Boots?
       </h2>
       <p className="text-text-muted leading-relaxed mb-4">
-        Glow in Wellness uses Therabody compression boots — a pair of full-leg sleeves that fit
+        Glow in Wellness uses professional-grade compression boots — a pair of full-leg sleeves that fit
         over your feet and legs and cycle through gentle waves of dynamic air compression. Built-in
         infrared heat and vibration work alongside the compression, and many clients find the
         sensation relaxing from the feet upward.
@@ -173,9 +186,9 @@ export default function CompressionBootRecoveryCabooltureePage() {
           />
         </svg>
         <p className="text-text-muted text-sm leading-relaxed">
-          If you have a specific medical condition affecting circulation or swelling, please check
-          with your doctor before booking, or mention it when you book so the session can be
-          tailored appropriately.
+          If you are not in generally good health, or you have a medical condition affecting your
+          circulation or swelling, please check with your doctor before booking — or mention it
+          when you book so the session can be tailored appropriately.
         </p>
       </div>
 

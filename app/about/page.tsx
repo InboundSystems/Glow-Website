@@ -108,7 +108,7 @@ export default function AboutPage() {
                 </p>
                 <p className="text-text-muted leading-relaxed">
                   Alongside remedial massage, Bowen therapy, and TMJ
-                  treatment, I also offer Therabody compression boot
+                  treatment, I also offer compression boot
                   sessions in clinic — a relaxing addition for tired legs,
                   available on its own or as an add-on to your massage.
                 </p>
