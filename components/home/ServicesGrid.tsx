@@ -5,7 +5,7 @@ import Image from "next/image";
 import FadeIn from "@/components/ui/FadeIn";
 import { compressionBootPricing } from "@/lib/compressionBootPricing";
 import { remedialMassagePricing, bowenPricing } from "@/lib/massagePricing";
-import { rhythmicCompressionPricing } from "@/lib/rhythmicCompressionPricing";
+import { pulsetherapyPricing } from "@/lib/pulsetherapyPricing";
 
 const accreditations = [
   "Diploma of Remedial Massage, Q Academy, QLD",
@@ -51,12 +51,12 @@ const wellnessServices = [
   {
     // No photography for this service yet — Gloria is shooting some once the new
     // clinic is set up. Add an `image` here when it lands.
-    title: "Rhythmic Compression Therapy",
-    href: "/rhythmic-compression-therapy-caboolture",
+    title: "Pulsetherapy",
+    href: "/pulsetherapy-caboolture",
     image: null,
     body:
-      "A fully-clothed, reclined session using compression sleeves that pulse in time with your own heartbeat, from the ankles up towards the abdomen. Every appointment includes a consultation so it can be tailored to you.",
-    pricing: rhythmicCompressionPricing,
+      "A rhythmic compression treatment: a fully-clothed, reclined session using sleeves that pulse in time with your own heartbeat, from the ankles up towards the abdomen. Every appointment includes a consultation so it can be tailored to you.",
+    pricing: pulsetherapyPricing,
   },
 ];
 

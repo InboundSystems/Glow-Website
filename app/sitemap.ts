@@ -41,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${BASE_URL}/rhythmic-compression-therapy-caboolture`,
+      url: `${BASE_URL}/pulsetherapy-caboolture`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,

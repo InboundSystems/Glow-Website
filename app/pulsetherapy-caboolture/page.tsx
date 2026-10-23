@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
-import { rhythmicCompressionPricing } from "@/lib/rhythmicCompressionPricing";
+import { pulsetherapyPricing } from "@/lib/pulsetherapyPricing";
 
 export const metadata: Metadata = {
-  title: "Rhythmic Compression Therapy Caboolture",
+  title: "Pulsetherapy Caboolture",
   description:
-    "Rhythmic Compression Therapy in Caboolture with Gloria Mullaly at Glow in Wellness. A fully-clothed, reclined session using compression sleeves that pulse in time with your own heartbeat, from the ankles up. Introductory pricing — book online today.",
+    "Pulsetherapy in Caboolture with Gloria Mullaly at Glow in Wellness. A fully-clothed, reclined session using compression sleeves that pulse in time with your own heartbeat, from the ankles up. Introductory pricing — book online today.",
   keywords: [
+    "Pulsetherapy Caboolture",
+    "Pulsetherapy near me",
+    "Pulsetherapy Moreton Bay",
     "rhythmic compression therapy Caboolture",
     "compression therapy Caboolture",
     "wellness services Caboolture",
@@ -63,9 +66,14 @@ const expectSteps = [
 
 const faqs = [
   {
-    question: "What is Rhythmic Compression Therapy?",
+    question: "What is Pulsetherapy?",
     answer:
       "It's delivered through a set of leg and abdomen sleeves connected to a console. Once fitted, the sleeves work through a pulsed mechanical stimulation timed to your own heartbeat, moving from the ankles up towards the abdomen. You stay fully clothed and reclined for the whole session.",
+  },
+  {
+    question: "What does \"synchronised to your heartbeat\" actually mean?",
+    answer:
+      "A sensor reads your pulse for the whole session, and the device times each stimulation to land in the pause between one heartbeat and the next. That means one stimulation per heartbeat, or around 1,800 in a 30-minute session at a resting heart rate of 60 beats per minute. A conventional fixed-cycle compression session delivers around 90.",
   },
   {
     question: "How long is a session, and what does it cost?",
@@ -80,7 +88,7 @@ const faqs = [
   {
     question: "How is it different from the compression boots?",
     answer:
-      "The compression boots cover the legs only and combine air compression with infrared heat and vibration. Rhythmic Compression Therapy covers the legs and abdomen, and its pulses are synchronised to your own heartbeat rather than running on a fixed cycle. Gloria can talk you through which suits what you're after.",
+      "The compression boots cover the legs only and combine air compression with infrared heat and vibration. Pulsetherapy covers the legs and abdomen, and its pulses are synchronised to your own heartbeat rather than running on a fixed cycle. Gloria can talk you through which suits what you're after.",
   },
   {
     question: "Is this a medical treatment?",
@@ -94,19 +102,19 @@ const relatedServices = [
   { name: "Remedial Massage", href: "/remedial-massage-caboolture" },
 ];
 
-export default function RhythmicCompressionTherapyCabooltureePage() {
+export default function PulsetherapyCaboolturePage() {
   return (
     <ServicePageTemplate
       breadcrumb={{
-        name: "Rhythmic Compression Therapy Caboolture",
-        href: "/rhythmic-compression-therapy-caboolture",
+        name: "Pulsetherapy Caboolture",
+        href: "/pulsetherapy-caboolture",
       }}
-      heading="Rhythmic Compression Therapy Caboolture"
+      heading="Pulsetherapy Caboolture"
       intro="A fully-clothed, reclined session using compression sleeves that pulse in time with your own heartbeat, working from the ankles up towards the abdomen. Every appointment includes a consultation so it can be tailored to you. This is a relaxation and wellness service, not a medical treatment."
       benefits={benefits}
       benefitsDisclaimer={benefitsDisclaimer}
       expectSteps={expectSteps}
-      pricing={rhythmicCompressionPricing}
+      pricing={pulsetherapyPricing}
       faqs={faqs}
       relatedServices={relatedServices}
     >
@@ -114,8 +122,8 @@ export default function RhythmicCompressionTherapyCabooltureePage() {
         How It Works
       </h2>
       <p className="text-text-muted leading-relaxed mb-4">
-        Rhythmic Compression Therapy is delivered through a set of leg and abdomen sleeves
-        connected to a console. Once fitted, the sleeves work through a pulsed mechanical
+        Pulsetherapy is a rhythmic compression treatment delivered through a set of leg and
+        abdomen sleeves connected to a console. Once fitted, the sleeves work through a pulsed mechanical
         stimulation timed to your own heartbeat, moving from the ankles up towards the abdomen.
         You&apos;ll stay fully clothed and reclined for the whole session.
       </p>
@@ -125,28 +133,77 @@ export default function RhythmicCompressionTherapyCabooltureePage() {
         clients find the sensation relaxing, and there&apos;s nothing to recover from
         afterwards — you can head off as soon as you&apos;re ready.
       </p>
-      <p className="text-text-muted leading-relaxed">
+      <p className="text-text-muted leading-relaxed mb-10">
         Every appointment includes a 15-minute consultation. It&apos;s a chance to talk through
         what you&apos;re after, cover any health questions, and have the session tailored to you
         before it starts.
       </p>
 
+      <h2 className="font-serif text-2xl font-bold text-text-dark mb-4">
+        The Science Behind the Rhythm
+      </h2>
+      <p className="text-text-muted leading-relaxed mb-4">
+        Pulsetherapy is a patented process developed in France. What sets it apart is that it
+        doesn&apos;t run on a timer. A small sensor reads your pulse throughout the session, and
+        the console uses it to time each stimulation so it lands in the pause between one
+        heartbeat and the next. The technical term for this is <em>cardio-synchronised</em>{" "}
+        stimulation: the device follows your heart&apos;s rhythm rather than setting its own.
+      </p>
+      <p className="text-text-muted leading-relaxed mb-4">
+        Each of those stimulations travels through the sleeves in sequence, starting at the
+        ankles and moving up through the legs to the abdomen. Because it&apos;s driven by your
+        heart rate, the pace is unique to you, and it shifts naturally as you settle and your
+        heart rate changes during the session.
+      </p>
+      <p className="text-text-muted leading-relaxed mb-6">
+        That makes it a very different experience from conventional compression. A typical
+        compression cycle squeezes for around 4 seconds and then releases for around 16, the same
+        for everyone, which works out to roughly 3 cycles a minute. Pulsetherapy delivers one
+        stimulation per heartbeat instead.
+      </p>
+
+      <div className="grid sm:grid-cols-2 gap-4 mb-4">
+        <div className="rounded-2xl bg-sage-light p-6 text-center">
+          <p className="font-serif text-4xl font-bold text-plum mb-1">~1,800</p>
+          <p className="text-sm text-text-muted">
+            stimulations in a 30-minute Pulsetherapy session
+          </p>
+        </div>
+        <div className="rounded-2xl bg-sage-light p-6 text-center">
+          <p className="font-serif text-4xl font-bold text-text-dark mb-1">~90</p>
+          <p className="text-sm text-text-muted">
+            cycles in 30 minutes of conventional fixed-cycle compression
+          </p>
+        </div>
+      </div>
+      <p className="text-xs text-text-muted leading-relaxed">
+        Based on a resting heart rate of 60 beats per minute. Your own count depends on your
+        heart rate during the session.
+      </p>
+
       {/*
-        NAMING — this service is deliberately NOT called "Pulsetherapy".
-        Gloria's instruction (email, 9 Oct 2026) is that she cannot use the machine's brand name
-        in her advertising. The supplier's own flyer shows "Pulsetherapy(R)" as a registered
-        trademark of STENDO, so "Pulsetherapy" is a second brand name rather than a neutral
-        rename. "Rhythmic Compression Therapy" describes what the device physically does with no
-        mark attached. Confirm the wording with Gloria.
+        NAMING — "Pulsetherapy" is STENDO's registered trademark. It was briefly renamed
+        "Rhythmic Compression Therapy" (11 Oct 2026), but Gloria confirmed (email, 15 Oct 2026)
+        that as an owner of an official STENDO machine she can use "Pulsetherapy" in her
+        marketing, and the supplier asked her to, as it's the term clients search for.
+        "STENDO" itself must still never appear in copy, metadata, keywords or alt text.
 
         Mechanism copy above is sourced from the supplier's own spec sheet
         (STENDO-Pulsetherapy.pdf, found 1 Sept 2026) — deliberately limited to what the device
         physically does (pulsed, cardio-synchronised sleeves, ankles to abdomen). See the note
         above the benefits array for what must NOT be added.
 
-        HISTORY — this route was /pulsetherapy-pop-up-caboolture and promoted a one-day event on
-        18 Sept 2026. That event has passed; the page is now a standing service page at the
-        introductory rate, and the old URL 308s here via next.config.ts. Gloria has not said
+        "The Science Behind the Rhythm" (added 23 Oct 2026, after Gloria asked for "more of the
+        science", 15 Oct) uses spec-sheet pp. 2, 4–5 only: pulse sensor, one stimulation between
+        heartbeats, ankles-to-abdomen sequence, 1800 vs 90 (60 bpm; 4s on / 16s off, 3/min),
+        patented in France. Deliberately EXCLUDED from the same PDF: endothelium stimulation /
+        "shear stress", "blood flow activation", "exercise-like" blood pulsatility, "entire body
+        effect", lymphatic / metabolic-waste claims, and the indications chart. They are all
+        physiological outcome claims, and rule 3 applies to them however they're framed.
+
+        HISTORY — this route was /pulsetherapy-pop-up-caboolture (one-day event, 18 Sept 2026),
+        then /rhythmic-compression-therapy-caboolture (11–16 Oct 2026). Both old URLs 308 here
+        via next.config.ts. The page is a standing service page at the introductory rate. Gloria has not said
         whether the face treatment is launching as a standing service, so its event-only pricing
         (Face $90, Body + Face combo $170) is not listed. Ask before adding it back.
 

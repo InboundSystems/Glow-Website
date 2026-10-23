@@ -58,14 +58,19 @@ const nextConfig: NextConfig = {
 
   async redirects() {
     return [
-      // The one-day Pulsetherapy pop-up (18 Sept 2026) is over and the service
-      // has been renamed to drop the supplier's trademark. Keep this permanent
-      // redirect: the old URL was advertised to clients and is indexed.
-      // When the Wellness Services merge lands, repoint this destination at the
-      // new page rather than chaining a second redirect behind it.
+      // Former Pulsetherapy URLs: the one-day pop-up (18 Sept 2026), and the
+      // brief "Rhythmic Compression Therapy" rename (11–16 Oct 2026). Keep these
+      // permanent redirects: both URLs were advertised or indexed.
+      // When the Wellness Services merge lands, repoint these destinations at
+      // the new page rather than chaining a second redirect behind them.
       {
         source: "/pulsetherapy-pop-up-caboolture",
-        destination: "/rhythmic-compression-therapy-caboolture",
+        destination: "/pulsetherapy-caboolture",
+        permanent: true,
+      },
+      {
+        source: "/rhythmic-compression-therapy-caboolture",
+        destination: "/pulsetherapy-caboolture",
         permanent: true,
       },
     ];
